@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <link rel="shortcut icon" href="/HTML/images/favicon.jpg">
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+
+
+        }
+
+        h1 {
+            color: #333;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Headings -->
+    <h1>Hello, World!</h1>
+    <h2>Hello, World!</h2>
+    <h3>Hello, World!</h3>
+    <h4>Hello, World!</h4>
+    <h5>Hello, World!</h5>
+    <h6>Hello, World!</h6>
+
+    <p>
+        ipsum dolor sit amet, consectetur adipiscing elit. <br> Sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.
+        <hr>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores hic possimus eligendi quaerat.
+        <strong>Repudiandae</strong> aspernatur similique in, at dolorem voluptate, fugit ad harum beatae fugiat odio,
+        cupiditate unde nemo. <em>Laboriosam</em> nemo error voluptatum sunt ipsam aliquid. Optio eligendi
+        aliquam,<mark>Laboriosam</mark> ipsa tenetur,
+        maiores recusandae quam tempore explicabo iusto quibusdam maxime adipisci, quasi eum est doloremque.
+        <b>Blanditiis</b>
+        nostrum nemo eveniet qui odit a quasi nobis numquam <i>doloribus</i> laboriosam, esse assumenda incidunt, minus
+        fuga
+        aliquam iusto excepturi, <u>consequuntur </u>commodi corporis rem obcaecati? Qui, minima? Nesciunt atque, nobis
+        iste
+    <blockquote>
+        earum quia explicabo <q>modi</q> minus voluptate dolor doloribus quisquam quam <cite>dicta </cite>esse! Quidem,
+        esse
+        iure.
+    </blockquote>
+    </p>
+
+    <a href="https://www.programiz.com" target="_blank" download>
+        <img src="/HTML/images/favicon.jpg" alt="Programiz Logo" width="100" height="100">
+    </a>
+    <a id="link" href="https://www.programiz.com" target="_self" download="favicon">
+        <img src="/HTML/images/favicon.jpg" alt="Programiz Logo" width="100" height="100">
+    </a>
+    <a href="mailto:user@example.com">Send email</a>
+    <a href="tel:+4733378901">+47 333 78 901</a>
+    <br>
+    <!-- task-5 : List-->
+
+    Ordered List:
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+
+    Unordered List:
+    <ul>
+        <li>Item A</li>
+        <li>Item B</li>
+        <li>Item C</li>
+    </ul>
+
+    description List:
+    <dl>
+        <dt>Term 1</dt>
+        <dd>Description for Term 1</dd>
+        <dt>Term 2</dt>
+        <dd>Description for Term 2</dd>
+    </dl>
+
+    <!-- Task-6 : Images and Media -->
+    <figure>
+        <img src="/HTML/images/favicon.jpg" alt="favicon Logo" width="200" height="200">
+        <figcaption>Favicon Logo</figcaption>
+    </figure>
+    <audio controls>
+        <source src="C:\Users\raman\Music\Ringtones\Jai Shri Ram Notification Ringtone(PagalWorld.com.se).mp3"
+            type="audio/mp3">
+    </audio>
+    <video width="320" height="190" controls>
+        <source
+            src="C:\Users\raman\Pictures\Pictures\Captures\food-delivery-website - Personal - Microsoft​ Edge 2026-06-18 16-52-12.mp4"
+            type="video/mp4">
+    </video>
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player"></iframe>
+
+    <br><br>
+
+    <!-- task-7 -->
+
+    Table:
+    <table border="1">
+        <thead>
+            <tr>
+                <th rowspan="2">Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Row 1, Cell 1</td>
+                <td>Row 1, Cell 2</td>
+                <td>Row 1, Cell 3</td>
+            </tr>
+            <tr>
+                <td rowspan="3">Mark Smith</td>
+                <td>English</td>
+                <td>67</td>
+            </tr>
+            <tr>
+                <td>Math</td>
+                <td>85</td>
+            </tr>
+            <tr>
+                <td>Science</td>
+                <td>78</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>2</td>
+                <td>3</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td colspan="2">Total</td>
+                <td>8</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <br><br>
+
+    <!-- task-8 : Forms -->
+    <form action="/submit" method="post">
+        <fieldset>
+            <legend>Personalia:</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            First name: <input type="text" name="fname"><br>
+            Last name: <input type="text" name="lname" disabled><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <input type="checkbox" id="subscribe" name="subscribe">
+            <label for="subscribe">Subscribe to newsletter</label><br><br>
+
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label><br><br>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required><br><br>
+            <label for="file">Upload a file:</label>
+            <input type="file" id="file" name="file" required><br><br>
+
+            <label for="country">Country: </label>
+            <select id="country" name="country">
+                <option value="usa">United States</option>
+                <option value="ca">Canada</option>
+                <option value="uk">United Kingdom</option>
+            </select>
+
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" value="Norway" readonly><br><br>
+
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+
+
+            <input type="submit" value="Submit" required><br><br>
+            <input type="reset" value="Reset" required>
+        </fieldset>
+    </form>
+
+    <br><br>
+    <!-- task-9 : Semantic Elements -->
+
+    Semantic Elements
+
+    <br><br>
+    <header>Header</header>
+    <main>Main</main>
+    <article>Article</article>
+    <section>Section</section>
+    <nav>Navigation
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+    <aside>Aside content</aside>
+    <time datetime="2026-07-02">Time </time>
+    <address>Address Content</address>
+    <addr>Address Content</addr>
+    <details>Details Content
+        <summary>Summary Content</summary>
+    </details>
+    <footer>Footer Content</footer>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
