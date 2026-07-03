@@ -1,0 +1,128 @@
+.box1,
+.box2,
+.box3,
+.box4,
+.box5 {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    background-image: url("/HTML/images/OIP.jpg");
+    background-size: cover;
+}
+
+.box1 {
+    position: relative;
+    top: 50px;
+    left: 50px;
+}
+
+.box2 {
+    position: absolute;
+    top: 50px;
+    left: 300px;
+}
+
+.box3 {
+    position: fixed;
+    top: 50px;
+    left: 550px;
+}
+
+.box4 {
+    position: sticky;
+    top: 50px;
+    left: 800px;
+}
+
+.box5 {
+    position: static;
+    top: 50px;
+    left: 1050px;
+}
+
+.box6 {
+    position: relative;
+}
+
+.top {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 20px;
+}
+
+.left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    font-size: 20px;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+}
+
+.right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    font-size: 20px;
+}
+
+.bottom {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 20px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    opacity: 0.5;
+}
+
+.box7 {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    z-index: 1;
+    border: 1px solid black;
+    background-color: lightblue;
+}
+
+.box8 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    z-index: 2;
+    left: 50px;
+    top: 50px;
+    border: 1px solid black;
+    background-color: lightgreen;
+}
+
+.box9 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    z-index: 3;
+    left: 100px;
+    top: 100px;
+    border: 1px solid black;
+    background-color: lightcoral;
+}
+
+.box10 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    z-index: -1;
+    top: 205px;
+    border: 1px solid black;
+    background-color: lightyellow;
+}
