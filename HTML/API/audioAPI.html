@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <style>
+        video {
+            width: 480px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        button {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body></body>
+
+<video id="myVideo" controls>
+    <source
+        src="C:\Users\raman\Pictures\Pictures\Captures\food-delivery-website - Personal - Microsoft​ Edge 2026-06-18 16-52-12.mp4"
+        type="video/mp4">
+    Your browser does not support HTML5 video.
+</video>
+
+<button onclick="playVideo()">Play</button>
+<button onclick="pauseVideo()">Pause</button>
+<button onclick="muteVideo()">Mute/Unmute</button>
+<button onclick="restartVideo()">Restart</button>
+
+<p id="status"></p>
+
+<script>
+    const video = document.getElementById('myVideo');
+    const statusText = document.getElementById('status');
+
+    // Play video
+    function playVideo() {
+        video.play().catch(err => console.error("Play error:", err));
+    }
+
+    // Pause video
+    function pauseVideo() {
+        video.pause();
+    }
+
+    // Mute/Unmute video
+    function muteVideo() {
+        video.muted = !video.muted;
+    }
+
+    // Restart video
+    function restartVideo() {
+        video.currentTime = 0;
+        video.play();
+    }
+
+    // Update status on time change
+    video.addEventListener('timeupdate', () => {
+        statusText.textContent = `Time: ${video.currentTime.toFixed(1)}s / ${video.duration.toFixed(1)}s`;
+    });
+</script>
+
+<button onclick="playSound()">Play Sound</button>
+<script>
+    const audio = new (window.Audio || window.webkitAudioContext)();
+    const oscillator = audio.createOscillator();
+    oscillator.type = 'sine';
+    oscillator.frequency.setValueAtTime(440, audio.currentTime);
+    oscillator.connect(audio.destination);
+    function playSound() {
+        oscillator.start();
+        oscillator.stop(audio.currentTime + 1);
+    }
+</script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p>Displaying location using Geolocation API</p>
+    <button onclick="getLocation()">Try It</button>
+    <p id="demo1"></p>
+    <p>Display location in map</p>
+    <button onclick="getLocation()">Try It</button>
+    <div id="demo2" style="width:500px;height:500px;"></div>
+    <!-- <script><iframe
+            width="500"
+            height="500"
+            loading="lazy"
+            src="https://www.google.com/maps?q=23.0225,72.5714&output=embed">
+        </iframe></script> -->
+    <!-- <iframe
+            width="500"
+            height="500"
+            loading="lazy"
+            src="https://maps.google.com/maps?q=${lat},${lng}&z=15&output=embed">
+        </iframe> -->
+    <script src="https://www.google.com/maps?q=23.0225,72.5714&output=embed">
+    </script>
+
+    <script>
+        let x = document.getElementById("demo1");
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError, showLoc);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            x.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+        }
+        function showLoc(position) {
+            latt = position.coords.latitude;
+            long = position.coords.longitude;
+            var lattlong = new google.maps.LatLng(latt, long);
+            var mapOptions = {
+                center: lattlong,
+                zoom: 10,
+                mapTypeControl: true,
+                navigationControlOptions: {
+                    style: google.maps.NavigationControlStyle.SMALL
+                },
+            };
+            var map = new google.maps.Map(document.getElementById("demo2"), mapOptions);
+            var markerg = new google.maps.Marker({
+                position: lattlong,
+                map: map,
+                title: "You are here!"
+            });
+        }
+        function showError(error) {
+            switch (error.code) {
+                case error.PERMISSION_DENIED: //The application doesn't have permission to make use of location services
+                    x.innerHTML = "User denied the request for Geolocation."
+                    break;
+                case error.POSITION_UNAVAILABLE: //The location of the device is uncertain
+                    x.innerHTML = "Location information is unavailable."
+                    break;
+                case error.TIMEOUT: //The time to fetch location information exceeded the maximum timeout interval
+                    x.innerHTML = "The request to get user location timed out."
+                    break;
+                case error.UNKNOWN_ERROR: //An unknown error
+                    x.innerHTML = "An unknown error occurred."
+                    break;
+            }
+        }
+    </script>
+    
+    <canvas id="myCanvas" width="200" height="200"></canvas>
+    <script>
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+        ctx.fillStyle = "blue";
+        ctx.fillRect(50, 50, 100, 100);
+    </script>
+</body>
+
+</html>

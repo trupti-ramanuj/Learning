@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Geolocation Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 16px;
+        }
+
+        #demo2 {
+            width: 100%;
+            max-width: 800px;
+            height: 500px;
+            margin-top: 12px;
+        }
+
+        button {
+            margin: 6px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Displaying location using Geolocation API</p>
+    <button id="locBtn">Get location & show map</button>
+    <p id="demo1"></p>
+
+    <div id="demo2"></div>
+    <button id="openGoogle" style="display:none">Open in Google Maps</button>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        const demo1 = document.getElementById('demo1');
+        const locBtn = document.getElementById('locBtn');
+        const openGoogle = document.getElementById('openGoogle');
+        let map, marker, lastPos;
+
+        locBtn.addEventListener('click', () => {
+            if (!navigator.geolocation) {
+                demo1.textContent = 'Geolocation is not supported by your browser.';
+                return;
+            }
+            navigator.geolocation.getCurrentPosition(success, error, { enableHighAccuracy: true });
+        });
+
+        function success(position) {
+            const lat = position.coords.latitude;
+            const lng = position.coords.longitude;
+            lastPos = { lat, lng };
+            demo1.innerHTML = `Latitude: ${lat}<br>Longitude: ${lng}`;
+
+            if (!map) {
+                map = L.map('demo2').setView([lat, lng], 13);
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; OpenStreetMap contributors'
+                }).addTo(map);
+                marker = L.marker([lat, lng]).addTo(map).bindPopup('You are here').openPopup();
+            } else {
+                map.setView([lat, lng], 13);
+                marker.setLatLng([lat, lng]).openPopup();
+            }
+
+            openGoogle.style.display = 'inline-block';
+        }
+
+        function error(err) {
+            switch (err.code) {
+                case err.PERMISSION_DENIED:
+                    demo1.textContent = 'User denied the request for Geolocation.';
+                    break;
+                case err.POSITION_UNAVAILABLE:
+                    demo1.textContent = 'Location information is unavailable.';
+                    break;
+                case err.TIMEOUT:
+                    demo1.textContent = 'The request to get user location timed out.';
+                    break;
+                default:
+                    demo1.textContent = 'An unknown error occurred.';
+                    break;
+            }
+        }
+
+        openGoogle.addEventListener('click', () => {
+            if (!lastPos) return;
+            const url = `https://www.google.com/maps?q=${lastPos.lat},${lastPos.lng}`;
+            window.open(url, '_blank');
+        });
+    </script>
+</body>
+
+</html>

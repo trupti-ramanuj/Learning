@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Learn HTML in Gujarati">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Ramanuj">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .blink {
+        animation: blinker 1s linear infinite;
+        color: red;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    @keyframes blinker {
+        50% {
+            opacity: 0;
+        }
+    }
+</style>
+
+<body>
+    <iframe src="https://www.google.com">Google</iframe>
+    <object data="/images/OIP.jpg" width="200" height="100">
+        Your browser does not support embedded videos
+    </object>
+    <embed src="/images/favicon.jpg" width="100" height="100">
+    <img src="/images/favicon.jpg" alt="favicon.jpg" width="200" height="200">
+    <button aria-label="Favicon">
+        <img src="/images/OIP.jpg" alt="">
+    </button>
+
+    <button>
+        <span aria-hidden="true"><big>Tweet</big></span>
+
+    </button>
+
+    <div role="button" tabindex="0" onclick="saveData()">
+        Save
+    </div>
+    <font style="font-size: small;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, facere corrupti
+        dolorum corporis
+        reprehenderit quod at <center>eveniet? Reprehenderit fuga facere suscipit ipsa nisi exercitationem <blink>
+                repellat
+                tenetur, non</blink>
+            nemo alias error?</center>
+        <p class="blink">This text blinks using CSS!</p>
+    </font>
+</body>
+
+</html>
