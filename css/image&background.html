@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Inter", sans-serif;
+            color: #fff;
+            display: flex;
+            float: left;
+        }
+
+        .hero {
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 0 24px;
+            background-image: linear-gradient(135deg, rgba(99, 102, 241, 0.85), rgba(244, 114, 182, 0.85)), url("/images/favicon.jpg");
+            background-size: cover;
+            background-position: center;
+            width: 500px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: 16px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #e0e7ff;
+        }
+
+        .hero2 {
+            height: 500;
+            width: 200;
+            display: grid;
+            place-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 48px 24px;
+            font-family: "Inter", sans-serif;
+            background-image: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.6)), url("/images/OIP.jpg");
+            background-size: cover;
+            background-position: center;
+            border-radius: 18px;
+        }
+
+        .hero3 p {
+            background-color: #ff5733;
+            /* Red-Orange */
+
+        }
+
+        .hero3 h1 {
+            background-color: rgb(255, 87, 51);
+            /* Same as #ff5733 */
+
+        }
+
+        .hero3 h2 {
+            background-color: rgba(255, 87, 51, 0.5);
+            /* 50% transparent */
+        }
+
+        .hero4 {
+            background-image: radial-gradient(circle, #ff5733, #33c1ff);
+            height: 500;
+            width: 200;
+            display: grid;
+            place-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 48px 24px;
+            font-family: "Inter", sans-serif;
+
+        }
+
+        .hero3 h3 {
+            background-color: hsl(14, 100%, 60%);
+
+        }
+
+        .hero3 h4 {
+            background-color: hsla(14, 100%, 60%, 0.5);
+        }
+
+        #box {
+            height: 500;
+            width: 200;
+            display: grid;
+            place-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 48px 24px;
+            font-family: "Inter", sans-serif;
+            background-image: url("images/OIP.jpg");
+            background-repeat: repeat;
+            border: 1px solid black;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero">
+        <div>
+            <h1>Design with color</h1>
+            <p>Layer gradients and imagery with accessible contrast.</p>
+        </div>
+    </section>
+    <section class="hero2">
+        <div>
+            <h1>Overlay Technique</h1>
+            <p>Combine gradients and imagery with strong contrast.</p>
+        </div>
+    </section>
+    <section class="hero4">
+        <div>
+            <h1>radial-gradient </h1>
+
+        </div>
+    </section>
+    <div class="hero3">
+        <p>background-color</p>
+        <h1>background-color</h1>
+        <h2>background-color</h2>
+        <h3>background-color</h3>
+        <h4>background-color</h4>
+    </div>
+    <div id="box">Background</div>
+</body>
+
+</html>

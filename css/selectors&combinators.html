@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        font-style: italic;
+    }
+
+    p {
+        color: red;
+    }
+
+    .myClass {
+        text-decoration: underline;
+    }
+
+    #myId {
+        font-family: monospace;
+    }
+
+    p.myClass#myId {
+        font-size: 1.5rem;
+    }
+
+    h2+p~p {
+        font-style: italic;
+    }
+
+    h2+p+p {
+        color: red;
+    }
+
+    .myClass+p {
+        text-decoration: underline;
+    }
+
+    #myId>.myClass {
+        outline: 3px dashed red;
+    }
+
+    *>p {
+        font-size: 1.1rem;
+    }
+
+    h2 {
+        &+p {
+            &~p {
+                font-style: italic;
+            }
+
+            &+p {
+                color: red;
+            }
+        }
+    }
+
+    .myClass {
+        &+p {
+            text-decoration: underline;
+        }
+    }
+
+    #myId {
+        &>.myClass {
+            outline: 3px dashed red;
+        }
+    }
+
+    * {
+        &>p {
+            font-size: 1.1rem;
+        }
+    }
+
+    /* unvisited link */
+    a:link {
+        color: red;
+    }
+
+    /* visited link */
+    a:visited {
+        color: green;
+    }
+
+    /* mouse over link */
+    a:hover {
+        color: hotpink;
+    }
+
+    /* Add a decorative quote before and after a paragraph */
+    #p::before {
+        content: "“";
+        /* Opening quote */
+        color: white;
+        font-size: 2em;
+    }
+
+    #p::after {
+        content: "”";
+        /* Closing quote */
+        color: white;
+        font-size: 2em;
+    }
+
+    /* selected link */
+    a:active {
+        color: blue;
+    }
+
+    input:focus {
+        background-color: yellow;
+        width: 250px;
+    }
+
+    p:nth-child(odd) {
+        background-color: red;
+    }
+
+    p:nth-child(even) {
+        background-color: lightgreen;
+    }
+</style>
+
+<body>
+    <p class="myClass" id="myId">I match everything.</p>
+    <p>I match the universal and type selectors only.</p>
+    <h2 class="myClass" id="myId">
+        No selectors match. <span class="myClass">This span has an outline</span> as
+        it is both myClass and a child of #myId.
+    </h2>
+    <p>The first paragraph is underlined. All the paragraphs are 1.1rem.</p>
+    <p>
+        The second paragraph is red. This and the following paragraphs are italic.
+    </p>
+    <p>The third paragraph is NOT red. It is italic and 1.1rem.</p>
+    <p class="myClass">
+        Does not have an outline; this is a sibling of H2, not a child. It is italic
+        and 1.1rem.
+    </p>
+    <h2>Styling a link depending on state</h2>
+
+    <p><b><a href="default.asp" target="_blank">This is a link</a></b></p>
+    <p><b>Note:</b> a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective.</p>
+    <p><b>Note:</b> a:active MUST come after a:hover in the CSS definition in order to be effective.</p>
+
+    <h1>Demo of :focus</h1>
+
+    <p>Click inside (or tab to) the input fields to change background color and width:</p>
+
+    <form>
+        <label for="name">Name: </label><br>
+        <input id="name" name="name" type="text" /><br>
+
+        <label for="email">Email: </label><br>
+        <input id="email" name="email" type="email" /><br>
+
+        <label for="country">Country: </label><br>
+        <input id="country" name="country" type="text" />
+    </form>
+    <p id="p">This is a styled paragraph using pseudo-elements.</p>
+    <h1>Demo of :nth-child</h1>
+
+    <p>The first paragraph.</p>
+    <p>The second paragraph.</p>
+    <p>The third paragraph.</p>
+    <p>The fourth paragraph.</p>
+    <p>The fifth paragraph.</p>
+
+
+
+
+
+</body>
+
+</html>

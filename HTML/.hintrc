@@ -26,6 +26,13 @@
       {
         "blink": "off"
       }
+    ],
+    "disown-opener": "off",
+    "axe/forms": [
+      "default",
+      {
+        "label": "off"
+      }
     ]
   }
 }
