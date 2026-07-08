@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>CSS Grid Container</title>
+</head>
+<style>
+    div.container {
+
+        /* sets the element as a grid container */
+        display: grid;
+
+        /* grid-template-columns: column1-size column2-size column3-size  */
+        -grid-template-columns: 100px 200px 100px;
+        -grid-template-columns: 100px 25% 3em;
+        -grid-template-columns: minmax(auto, 80%) 1fr 3em;
+        grid-template-columns: repeat(3, 100px);
+
+        /* grid-template-rows: row1-size row2-size row3-size .. */
+        -grid-template-rows: 100px 60px 80px;
+        -grid-template-rows: 1fr 1fr 3fr;
+        grid-template-rows: repeat(3, 1fr);
+
+        width: 400px;
+        border: 2px solid black;
+        background-color: orange;
+        padding: 12px;
+    }
+
+    /* styles all grid items */
+    div.item {
+        border: 1px solid black;
+        background-color: greenyellow;
+        text-align: center;
+        padding: 5px;
+        font-weight: bold;
+    }
+
+    .container1 {
+        display: grid;
+        gap: 30px 100px;
+        grid-template-columns: auto auto auto;
+        background-color: dodgerblue;
+        padding: 10px;
+    }
+
+    .container1 div {
+        background-color: #f1f1f1;
+        border: 1px solid black;
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .item1 {
+        grid-area: header;
+    }
+
+    .item2 {
+        grid-area: menu;
+    }
+
+    .item3 {
+        grid-area: main;
+    }
+
+    .item4 {
+        grid-area: right;
+    }
+
+    .item5 {
+        grid-area: footer;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template:
+            'header header header header header header'
+            'menu main main main right right'
+            'menu footer footer footer footer footer';
+        grid-gap: 10px;
+        background-color: #2196F3;
+        padding: 10px;
+    }
+
+    .grid-container>div {
+        background-color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        padding: 20px 0;
+        font-size: 30px;
+    }
+
+    #container2 {
+        width: 50%;
+        aspect-ratio: 2/1;
+        border: 1px solid black;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: end;
+    }
+
+    #container2>div {
+        border: 1px solid black;
+    }
+
+    #container3 {
+        width: 50%;
+        aspect-ratio: 2/1;
+        border: 1px solid black;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+
+    #container3>div {
+        border: 1px solid black;
+    }
+
+    #container4 {
+        width: 50%;
+        aspect-ratio: 2/1;
+        border: 1px solid black;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: right;
+    }
+
+    #container4>div {
+        border: 1px solid black;
+    }
+
+    #container5 {
+        width: 50%;
+        aspect-ratio: 2/1;
+        border: 1px solid black;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: baseline alignment;
+    }
+
+    #container5>div {
+        border: 1px solid black;
+    }
+
+    #container6 {
+        width: 50%;
+        aspect-ratio: 2/1;
+        border: 1px solid black;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: left;
+    }
+
+    #container6>div {
+        border: 1px solid black;
+    }
+
+    #container7 {
+        width: 50%;
+        aspect-ratio: 2/1;
+        border: 1px solid black;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: start;
+    }
+
+    #container7>div {
+        border: 1px solid black;
+    }
+
+    #container8 {
+        width: 50%;
+        aspect-ratio: 2/1;
+        border: 1px solid black;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: stretch;
+    }
+
+    #container8>div {
+        border: 1px solid black;
+    }
+
+
+
+    .blue {
+        background-color: lightblue;
+        width: 50%;
+    }
+
+    .red {
+        background-color: coral;
+        width: 40%;
+    }
+
+    .green {
+        background-color: lightgreen;
+        width: 60%;
+    }
+
+    #container9 {
+        width: 220px;
+        height: 300px;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+    }
+
+    #container9 div {
+        flex: 1;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+    }
+
+    #container10 {
+        width: 220px;
+        height: 300px;
+        border: 1px solid black;
+        display: flex;
+        align-items: stretch;
+    }
+
+    #container10 div {
+        flex: 1;
+        border: 1px solid black;
+        display: flex;
+        align-items: stretch;
+    }
+
+    #container11 {
+        width: 220px;
+        height: 300px;
+        border: 1px solid black;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    #container11 div {
+        flex: 1;
+        border: 1px solid black;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    #container12 {
+        width: 220px;
+        height: 300px;
+        border: 1px solid black;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    #container12 div {
+        flex: 1;
+        border: 1px solid black;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    #container13 {
+        width: 220px;
+        height: 300px;
+        border: 1px solid black;
+        display: flex;
+        align-items: start;
+    }
+
+    #container13 div {
+        flex: 1;
+        border: 1px solid black;
+        display: flex;
+        align-items: start;
+    }
+
+    #container14 {
+        width: 220px;
+        height: 300px;
+        border: 1px solid black;
+        display: flex;
+        align-items: end;
+    }
+
+    #container14 div {
+        flex: 1;
+        border: 1px solid black;
+        display: flex;
+        align-items: end;
+    }
+
+    #container15 {
+        width: 220px;
+        height: 300px;
+        border: 1px solid black;
+        display: flex;
+        align-items: baseline;
+    }
+
+    #container15 div {
+        flex: 1;
+        border: 1px solid black;
+        display: flex;
+        align-items: baseline;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+    </div>
+    <div class="container1">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+
+    <div class="grid-container">
+        <div class="item1">Header</div>
+        <div class="item2">Menu</div>
+        <div class="item3">Main</div>
+        <div class="item4">Right</div>
+        <div class="item5">Footer</div>
+    </div>
+    <div id="container2">
+        <div class="red">RED</div>
+        <div class="blue">BLUE</div>
+        <div class="green">GREEN</div>
+        <div class="red">RED</div>
+    </div>
+    <div id="container3">
+        <div class="red">RED</div>
+        <div class="blue">BLUE</div>
+        <div class="green">GREEN</div>
+        <div class="red">RED</div>
+    </div>
+    <div id="container4">
+        <div class="red">RED</div>
+        <div class="blue">BLUE</div>
+        <div class="green">GREEN</div>
+        <div class="red">RED</div>
+    </div>
+    <div id="container5">
+        <div class="red">RED</div>
+        <div class="blue">BLUE</div>
+        <div class="green">GREEN</div>
+        <div class="red">RED</div>
+    </div>
+    <div id="container6">
+        <div class="red">RED</div>
+        <div class="blue">BLUE</div>
+        <div class="green">GREEN</div>
+        <div class="red">RED</div>
+    </div>
+    <div id="container7">
+        <div class="red">RED</div>
+        <div class="blue">BLUE</div>
+        <div class="green">GREEN</div>
+        <div class="red">RED</div>
+    </div>
+    <div id="container8">
+        <div class="red">RED</div>
+        <div class="blue">BLUE</div>
+        <div class="green">GREEN</div>
+        <div class="red">RED</div>
+    </div>
+
+    <div id="container9">
+        <div style="background-color:coral;min-height:30px;">RED</div>
+        <div style="background-color:lightblue;min-height:50px;">BLUE</div>
+        <div style="background-color:lightgreen;min-height:190px;">Green</div>
+    </div>
+
+    <div id="container10">
+        <div style="background-color:coral;min-height:30px;">RED</div>
+        <div style="background-color:lightblue;min-height:50px;">BLUE</div>
+        <div style="background-color:lightgreen;min-height:190px;">Green</div>
+    </div>
+
+    <div id="container11">
+        <div style="background-color:coral;min-height:30px;">RED</div>
+        <div style="background-color:lightblue;min-height:50px;">BLUE</div>
+        <div style="background-color:lightgreen;min-height:190px;">Green</div>
+    </div>
+
+    <div id="container12">
+        <div style="background-color:coral;min-height:30px;">RED</div>
+        <div style="background-color:lightblue;min-height:50px;">BLUE</div>
+        <div style="background-color:lightgreen;min-height:190px;">Green</div>
+    </div>
+
+    <div id="container13">
+        <div style="background-color:coral;min-height:30px;">RED</div>
+        <div style="background-color:lightblue;min-height:50px;">BLUE</div>
+        <div style="background-color:lightgreen;min-height:190px;">Green</div>
+    </div>
+
+    <div id="container14">
+        <div style="background-color:coral;min-height:30px;">RED</div>
+        <div style="background-color:lightblue;min-height:50px;">BLUE</div>
+        <div style="background-color:lightgreen;min-height:190px;">Green</div>
+    </div>
+
+    <div id="container15">
+        <div style="background-color:coral;min-height:30px;">RED</div>
+        <div style="background-color:lightblue;min-height:50px;">BLUE</div>
+        <div style="background-color:lightgreen;min-height:190px;">Green</div>
+    </div>
+
+</body>
+
+</html>

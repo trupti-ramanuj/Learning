@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box1 div,
+    .box2 div,
+    .box3 div,
+    .box4 div,
+    .box5 div,
+    .box6 div,
+    .box7 div,
+    .box8 div,
+    .box9 div,
+    .box10 div,
+    .box11 div,
+    .box12 div,
+    .box13 div,
+    .box14 div,
+    .box15 div,
+    .box16 div,
+    .box17 div,
+    .box18 div,
+    .box19 div,
+    .box20 div,
+    .box21 div,
+    .box22 div,
+    .box23 div,
+    .box24 div,
+    .box25 div,
+    .box26 div,
+    .box27 div,
+    .box28 div,
+    .box29 div,
+    .box30 div,
+    .box31 div,
+    .box32 div,
+    .box33 div,
+    .box34 div,
+    .box35 div,
+    .box36 div,
+    .box37 div,
+    .box38 div,
+    .box39 div,
+    .box40 div {
+        width: 300px;
+        height: 200px;
+        display: flex;
+    }
+
+    .box1 {
+        height: 500px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+    }
+
+
+    .box2 {
+        height: 500px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .box3 {
+        height: 500px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .box4 {
+        height: 500px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .box5 {
+        height: 500px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        flex-direction: row-reverse;
+
+    }
+
+    .box6 {
+        height: 500px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        flex-wrap: nowrap;
+
+    }
+
+    .box7 {
+        height: 500px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    .box8 {
+        height: 500px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        flex-wrap: wrap-reverse;
+
+    }
+
+    .box9 {
+        height: 500px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        flex-flow: row-reverse;
+
+    }
+
+    .box10 {
+        height: 500px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .box11 {
+        height: 500px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        justify-content: end;
+
+    }
+
+    .box12 {
+        height: 500px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        justify-content: baseline;
+    }
+
+    .box13 {
+        height: 500px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        justify-content: first baseline;
+    }
+
+    .box14 {
+        height: 500px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .box15 {
+        height: 500px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .box16 {
+        height: 500px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        justify-content: last baseline;
+    }
+
+    .box17 {
+        height: 500px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        justify-content: left;
+    }
+
+    .box18 {
+        height: 500px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        justify-content: right;
+    }
+
+    .box19 {
+        height: 500px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .box20 {
+        height: 500px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .box20 {
+        height: 500px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .box21 {
+        height: 500px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        justify-content: start;
+    }
+
+    .box22 {
+        height: 500px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        justify-content: stretch;
+    }
+
+    .box23 {
+        height: 500px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        align-items: baseline;
+    }
+
+    .box24 {
+        height: 500px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        align-items: center;
+    }
+
+    .box25 {
+        height: 500px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        align-items: end
+    }
+
+    .box26 {
+        height: 500px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        align-items: first baseline;
+    }
+
+    .box27 {
+        height: 500px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .box28 {
+        height: 500px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .box29 {
+        height: 500px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        align-items: last baseline;
+    }
+
+    .box30 {
+        height: 500px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        align-items: start;
+    }
+
+    .box31 {
+        height: 500px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        align-items: stretch;
+    }
+
+    .box32 {
+        height: 500px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        align-content: stretch;
+    }
+
+    .box33 {
+        height: 500px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        align-content: center;
+    }
+
+    .box34 {
+        height: 500px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        align-content: flex-start;
+    }
+
+    .box33 {
+        height: 500px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        align-content: flex-end;
+    }
+
+    .box35 {
+        height: 500px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        align-content: space-between;
+    }
+
+    .box36 {
+
+        height: 500px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        align-content: space-around;
+    }
+
+    .box37 {
+        height: 500px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        align-content: space-evenly;
+    }
+
+    .box38 {
+        height: 500px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+    }
+
+    .box39 div {
+        -height: 500px;
+        border: 1px solid #c3c3c3;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 100px;
+    }
+
+    .box39 div:nth-of-type(2) {
+
+        border: 1px solid #c3c3c3;
+        flex-shrink: 2;
+    }
+
+    .box40 {
+        height: 500px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+    }
+</style>
+
+<body>
+    <div class="box1">
+        <div style="background-color:coral;">A</div>
+        <div style="background-color:lightblue;">B</div>
+        <div style="background-color:khaki;">C</div>
+        <div style="background-color:pink;">D</div>
+        <div style="background-color:lightgrey;">E</div>
+        <div style="background-color:lightgreen;">F</div>
+    </div>
+    <div class="box2">
+        <div style="background-color:coral;">A</div>
+        <div style="background-color:lightblue;">B</div>
+        <div style="background-color:khaki;">C</div>
+        <div style="background-color:pink;">D</div>
+        <div style="background-color:lightgrey;">E</div>
+        <div style="background-color:lightgreen;">F</div>
+    </div>
+    <div class="box3">
+        <div style="background-color:coral;">A</div>
+        <div style="background-color:lightblue;">B</div>
+        <div style="background-color:khaki;">C</div>
+        <div style="background-color:pink;">D</div>
+        <div style="background-color:lightgrey;">E</div>
+        <div style="background-color:lightgreen;">F</div>
+    </div>
+    <div class="box4">
+        <div style="background-color:coral;">A</div>
+        <div style="background-color:lightblue;">B</div>
+        <div style="background-color:khaki;">C</div>
+        <div style="background-color:pink;">D</div>
+        <div style="background-color:lightgrey;">E</div>
+        <div style="background-color:lightgreen;">F</div>
+    </div>
+    <div class="box5">
+        <div style="background-color:coral;">A</div>
+        <div style="background-color:lightblue;">B</div>
+        <div style="background-color:khaki;">C</div>
+        <div style="background-color:pink;">D</div>
+        <div style="background-color:lightgrey;">E</div>
+        <div style="background-color:lightgreen;">F</div>
+    </div>
+    <div class="box6">
+        <div style="background-color:coral;">A</div>
+        <div style="background-color:lightblue;">B</div>
+        <div style="background-color:khaki;">C</div>
+        <div style="background-color:pink;">D</div>
+        <div style="background-color:lightgrey;">E</div>
+        <div style="background-color:lightgreen;">F</div>
+    </div>
+    <div class="box7">
+        <div style="background-color:coral;">A</div>
+        <div style="background-color:lightblue;">B</div>
+        <div style="background-color:khaki;">C</div>
+        <div style="background-color:pink;">D</div>
+        <div style="background-color:lightgrey;">E</div>
+        <div style="background-color:lightgreen;">F</div>
+    </div>
+    <div class="box8">
+        <div style="background-color:coral;">A</div>
+        <div style="background-color:lightblue;">B</div>
+        <div style="background-color:khaki;">C</div>
+        <div style="background-color:pink;">D</div>
+        <div style="background-color:lightgrey;">E</div>
+        <div style="background-color:lightgreen;">F</div>
+    </div>
+    <div class="box9">
+        <div style="background-color:coral;">A</div>
+        <div style="background-color:lightblue;">B</div>
+        <div style="background-color:khaki;">C</div>
+        <div style="background-color:pink;">D</div>
+        <div style="background-color:lightgrey;">E</div>
+        <div style="background-color:lightgreen;">F</div>
+    </div>
+    <div class="box10">
+        <div style="background-color:coral;">A</div>
+        <div style="background-color:lightblue;">B</div>
+        <div style="background-color:khaki;">C</div>
+
+    </div>
+    <div class="box11">
+        <div style="background-color:coral;">A</div>
+        <div style="background-color:lightblue;">B</div>
+        <div style="background-color:khaki;">C</div>
+
+    </div>
+    <div class="box12">
+
+        <div style="background-color:pink;">D</div>
+        <div style="background-color:lightgrey;">E</div>
+        <div style="background-color:lightgreen;">F</div>
+    </div>
+    <div class="box13">
+        <div style="background-color:pink;">D</div>
+        <div style="background-color:lightgrey;">E</div>
+        <div style="background-color:lightgreen;">F</div>
+    </div>
+    <div class="box14">
+        <div style="background-color:coral;">A</div>
+        <div style="background-color:lightblue;">B</div>
+        <div style="background-color:khaki;">C</div>
+    </div>
+    <div class="box15">
+        <div style="background-color:coral;">A</div>
+        <div style="background-color:lightblue;">B</div>
+        <div style="background-color:khaki;">C</div>
+    </div>
+    <div class="box16">
+        <div style="background-color:pink;">D</div>
+        <div style="background-color:lightgrey;">E</div>
+        <div style="background-color:lightgreen;">F</div>
+    </div>
+    <div class="box17">
+        <div style="background-color:coral;">A</div>
+        <div style="background-color:lightblue;">B</div>
+        <div style="background-color:khaki;">C</div>
+    </div>
+    <div class="box18">
+        <div style="background-color:pink;">D</div>
+        <div style="background-color:lightgrey;">E</div>
+        <div style="background-color:lightgreen;">F</div>
+    </div>
+    <div class="box19">
+        <div style="background-color:coral;">A</div>
+        <div style="background-color:lightblue;">B</div>
+        <div style="background-color:khaki;">C</div>
+    </div>
+    <div class="box20">
+        <div style="background-color:pink;">D</div>
+        <div style="background-color:lightgrey;">E</div>
+        <div style="background-color:lightgreen;">F</div>
+    </div>
+    <div class="box21">
+        <div style="background-color:coral;">A</div>
+        <div style="background-color:lightblue;">B</div>
+        <div style="background-color:khaki;">C</div>
+
+    </div>
+    <div class="box22">
+
+        <div style="background-color:pink;">D</div>
+        <div style="background-color:lightgrey;">E</div>
+        <div style="background-color:lightgreen;">F</div>
+    </div>
+    <div class="box23">
+        <div style="background-color:pink;">D</div>
+        <div style="background-color:lightgrey;">E</div>
+        <div style="background-color:lightgreen;">F</div>
+    </div>
+    <div class="box24">
+        <div style="background-color:coral;">A</div>
+        <div style="background-color:lightblue;">B</div>
+        <div style="background-color:khaki;">C</div>
+    </div>
+    <div class="box25">
+        <div style="background-color:coral;">A</div>
+        <div style="background-color:lightblue;">B</div>
+        <div style="background-color:khaki;">C</div>
+    </div>
+    <div class="box26">
+        <div style="background-color:pink;">D</div>
+        <div style="background-color:lightgrey;">E</div>
+        <div style="background-color:lightgreen;">F</div>
+    </div>
+    <div class="box27">
+        <div style="background-color:coral;">A</div>
+        <div style="background-color:lightblue;">B</div>
+        <div style="background-color:khaki;">C</div>
+    </div>
+    <div class="box28">
+        <div style="background-color:pink;">D</div>
+        <div style="background-color:lightgrey;">E</div>
+        <div style="background-color:lightgreen;">F</div>
+    </div>
+    <div class="box29">
+        <div style="background-color:coral;">A</div>
+        <div style="background-color:lightblue;">B</div>
+        <div style="background-color:khaki;">C</div>
+    </div>
+    <div class="box30">
+        <div style="background-color:pink;">D</div>
+        <div style="background-color:lightgrey;">E</div>
+        <div style="background-color:lightgreen;">F</div>
+    </div>
+    <div class="box31">
+        <div style="background-color:coral;">A</div>
+        <div style="background-color:lightblue;">B</div>
+        <div style="background-color:khaki;">C</div>
+
+    </div>
+    <div class="box32">
+
+        <div style="background-color:pink;">D</div>
+        <div style="background-color:lightgrey;">E</div>
+        <div style="background-color:lightgreen;">F</div>
+    </div>
+    <div class="box33">
+        <div style="background-color:pink;">D</div>
+        <div style="background-color:lightgrey;">E</div>
+        <div style="background-color:lightgreen;">F</div>
+    </div>
+    <div class="box34">
+        <div style="background-color:coral;">A</div>
+        <div style="background-color:lightblue;">B</div>
+        <div style="background-color:khaki;">C</div>
+    </div>
+    <div class="box35">
+        <div style="background-color:coral;">A</div>
+        <div style="background-color:lightblue;">B</div>
+        <div style="background-color:khaki;">C</div>
+    </div>
+    <div class="box36">
+        <div style="background-color:pink;">D</div>
+        <div style="background-color:lightgrey;">E</div>
+        <div style="background-color:lightgreen;">F</div>
+    </div>
+    <div class="box37">
+        <div style="background-color:coral;">A</div>
+        <div style="background-color:lightblue;">B</div>
+        <div style="background-color:khaki;">C</div>
+    </div>
+    <div class="box38">
+        <div style="background-color:pink; flex-grow: 2;">D</div>
+        <div style="background-color:lightgrey; flex-grow: 3;">E</div>
+        <div style="background-color:lightgreen; flex-grow: 7;">F</div>
+    </div>
+    <div class="box39">
+        <div style="background-color:coral; ">A</div>
+        <div style="background-color:lightblue;">B</div>
+        <div style="background-color:khaki;">C</div>
+    </div>
+    <div class="box40">
+        <div style="background-color:pink;">D</div>
+        <div style="background-color:lightgrey; flex-basis: 50%;">E</div>
+        <div style="background-color:lightgreen;">F</div>
+    </div>
+</body>
+
+</html>

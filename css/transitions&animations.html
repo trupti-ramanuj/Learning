@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transition: width 2s, height 4s, background-color 3s;
+        }
+
+        .box1:hover {
+            width: 300px;
+            height: 300px;
+            background-color: orange;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transition-property: width;
+            transition-duration: 2s;
+            transition-timing-function: linear;
+            transition-delay: 1s;
+        }
+
+        .box2:hover {
+            width: 300px;
+        }
+
+        .box3 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transition: width 2s linear 1s;
+        }
+
+        .box3:hover {
+            width: 300px;
+        }
+
+        .box4 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transition: width 2s, height 2s, background-color 2s, transform 2s;
+        }
+
+        .box4:hover {
+            width: 300px;
+            height: 300px;
+            background-color: orange;
+            transform: rotate(180deg);
+        }
+
+        .box5 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: Animation;
+            animation-duration: 4s;
+        }
+
+        @keyframes Animation {
+            from {
+                background-color: red;
+            }
+
+            to {
+                background-color: yellow;
+            }
+        }
+
+        .box6 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: myAnimation;
+            animation-duration: 4s;
+        }
+
+        @keyframes myAnimation {
+            0% {
+                background-color: red;
+            }
+
+            25% {
+                background-color: yellow;
+            }
+
+            50% {
+                background-color: blue;
+            }
+
+            100% {
+                background-color: green;
+            }
+        }
+
+        .box7 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            animation-name: my;
+            animation-duration: 4s;
+        }
+
+        @keyframes my {
+            0% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: yellow;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: blue;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background-color: green;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        .box8 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            animation-name: box8;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes box8 {
+            0% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: yellow;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: blue;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background-color: green;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        div {
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            font-weight: bold;
+            position: relative;
+            animation-name: box9;
+            animation-duration: 5s;
+            animation-fill-mode: forwards;
+        }
+
+        #div1 {
+            animation-timing-function: linear;
+        }
+
+        #div2 {
+            animation-timing-function: ease;
+        }
+
+        #div3 {
+            animation-timing-function: ease-in;
+        }
+
+        #div4 {
+            animation-timing-function: ease-out;
+        }
+
+        #div5 {
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes box9 {
+            from {
+                left: 0px;
+            }
+
+            to {
+                left: 300px;
+            }
+        }
+
+        .box10 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            animation-name: box10;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+        }
+
+        @keyframes box10 {
+            0% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: yellow;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: blue;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background-color: green;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>The transition Property</h1>
+
+
+
+    <div class="box1"></div>
+    <h1>The transition Properties Specified One by One</h1>
+
+
+    <div class="box2"></div>
+
+    <h1>Using The transition Shorthand Property</h1>
+
+    <div class="box3"></div>
+    <h1>Transition + Transform</h1>
+
+    <div class="box4"></div>
+
+    <h1>CSS Animation</h1>
+
+    <div class="box5"></div>
+    <br>
+    <div class="box6"></div>
+    <br>
+    <div class="box7"></div>
+    <br>
+    <div class="box8"></div>
+    <br><br>
+    <div class="box9">
+        <div id="div1">linear</div>
+        <div id="div2">ease</div>
+        <div id="div3">ease-in</div>
+        <div id="div4">ease-out</div>
+        <div id="div5">ease-in-out</div>
+    </div>
+    <br><br><br>
+
+
+
+    <div class="box10"></div>
+</body>
+
+</html>

@@ -13,6 +13,7 @@
         }
 
         p.dashed {
+            outline-color: red;
             outline-style: dashed;
         }
 
@@ -39,6 +40,65 @@
         p.outset {
             outline-style: outset;
         }
+
+        p {
+            padding: 5px;
+            outline-style: solid;
+            outline-color: green;
+        }
+
+        p.ex1 {
+            outline-width: thin;
+        }
+
+        p.ex2 {
+            outline-width: medium;
+        }
+
+        p.ex3 {
+            outline-width: thick;
+        }
+
+        p.ex4 {
+            outline-width: 8px;
+        }
+
+        p {
+            padding: 5px;
+        }
+
+        p.ex5 {
+            outline: dashed;
+        }
+
+        p.ex6 {
+            outline: dotted red;
+        }
+
+        p.ex7 {
+            outline: 7px solid yellow;
+        }
+
+        p.ex8 {
+            outline: thick ridge pink;
+        }
+
+        #p1 {
+            margin: 30px;
+            padding: 5px;
+            background: yellow;
+            border: 1px solid black;
+            outline: 3px solid red;
+            outline-offset: -5px;
+        }
+
+        #p2 {
+            margin: 30px;
+            padding: 5px;
+            border: 1px solid black;
+            outline: 3px solid red;
+            outline-offset: 15px;
+        }
     </style>
 </head>
 
@@ -54,6 +114,28 @@
     <p class="ridge">A ridge outline. The effect depends on the outline-color value.</p>
     <p class="inset">An inset outline. The effect depends on the outline-color value.</p>
     <p class="outset">An outset outline. The effect depends on the outline-color value.</p>
+
+    <h2>The outline-width Property</h2>
+
+    <p class="ex1">A thin outline.</p>
+    <p class="ex2">A medium outline.</p>
+    <p class="ex3">A thick outline.</p>
+    <p class="ex4">A 8px thick outline.</p>
+
+    <h2>The outline shorthand Property</h2>
+
+    <p class="ex5">A dashed outline.</p>
+    <p class="ex6">A dotted red outline.</p>
+    <p class="ex7">A 7px solid yellow outline.</p>
+    <p class="ex8">A thick ridge pink outline.</p>
+
+    <h2>The outline-offset Property</h2>
+
+    <p id="p1">This paragraph has a black border and a red outline -5px inside the border edge.</p>
+
+    <h2>The outline-offset Property</h2>
+
+    <p id="p2">This paragraph has a black border and a red outline 15px outside the border edge.</p>
 
 </body>
 

@@ -1,0 +1,71 @@
+/* =========================
+   Global Variables
+========================= */
+
+:root {
+    --primary-color: #0077ff;
+    --secondary-color: #28a745;
+    --text-color: white;
+    --font-size: 18px;
+    --padding: 15px;
+    --border-radius: 10px;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    text-align: center;
+    margin: 30px;
+}
+
+
+
+h1 {
+    color: var(--primary-color);
+}
+
+
+
+.card {
+    background: var(--primary-color);
+    color: var(--text-color);
+    padding: var(--padding);
+    margin: 20px auto;
+    width: 350px;
+    border-radius: var(--border-radius);
+}
+
+
+button {
+    background: var(--secondary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+
+
+button:hover {
+    opacity: 0.8;
+}
+
+
+
+.special {
+
+    /* Local Variable */
+    --primary-color: crimson;
+
+    background: var(--primary-color);
+}
+
+
+.fallback {
+    color: var(--unknown-color, orange);
+    font-size: 22px;
+    margin-top: 30px;
+}
