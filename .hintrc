@@ -3,18 +3,20 @@
     "development"
   ],
   "hints": {
-    "disown-opener": "off",
-    "axe/forms": [
+    "axe/language": [
       "default",
       {
-        "label": "off"
+        "html-has-lang": "off"
       }
     ],
+    "meta-charset-utf-8": "off",
+    "meta-viewport": "off",
     "axe/text-alternatives": [
       "default",
       {
-        "image-alt": "off"
+        "document-title": "off"
       }
-    ]
+    ],
+    "no-inline-styles": "off"
   }
 }
