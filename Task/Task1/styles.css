@@ -14,46 +14,58 @@
     font-family: sans-serif;
 }
 
-.card-container {
-    width: 85%;
-    height: 600px;
-    margin: 100px auto;
+.body {
+    background: var(--primery-Gray);
+    min-height: 100vh;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+.card-container {
+
+    max-width: 1100px;
+    margin: 100px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
 }
 
 .card {
-    flex: 300px;
+    flex: 1;
+    max-height: 600px;
     padding: 30px;
     background: var(--primery-Gray);
     text-align: left;
     cursor: pointer;
+    padding: 45px 35px;
+}
+
+.card img {
+    width: 64px;
 }
 
 .card h2 {
     font-size: 38px;
-    margin: 20px 0px 20px 0px;
+    margin: 20px 0px;
     color: var(--primery-Gray);
+    text-transform: uppercase;
 }
 
 .card p {
     color: var(--primery-Transparent);
-    font-size: 30px;
+    font-size: 18px;
     margin-bottom: 40px;
-    line-height: 1.5;
+    line-height: 1.7;
 }
 
 button {
     width: 300px;
     height: 60px;
     border-radius: 30px;
-    margin: 20px;
-    border: 0;
-    outline: 0;
-    text-align: center;
+    border: none;
     font-size: 20px;
-    font-weight: 50px;
     background-color: var(--primery-Gray);
 }
 
@@ -71,6 +83,8 @@ button {
 
 .card1 {
     background: var(--primery-Gold);
+
+
 }
 
 .card2 {
@@ -79,4 +93,82 @@ button {
 
 .card3 {
     background: var(--primery-Green);
+
+}
+
+/*  */
+
+@media (max-width:992px) {
+    .card-container {
+        margin: 35px 25px;
+    }
+
+    .card {
+        padding: 35px 25px;
+    }
+
+    .card h2 {
+        font-size: 2rem;
+    }
+
+    .card p {
+        font-size: 0.95rem;
+        margin-bottom: 40px;
+    }
+
+    button {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .card-container {
+        flex-direction: column;
+        max-width: 400px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .card h2 {
+        font-size: 1.8rem;
+    }
+
+    .card p {
+        margin-bottom: 30px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+@media (max-width:480px) {
+
+    body {
+        padding: 20px 10px;
+    }
+
+    .card {
+        padding: 25px 20px;
+    }
+
+    .card img {
+        width: 50px;
+    }
+
+    .card h2 {
+        font-size: 1.5rem;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 14px;
+    }
 }
