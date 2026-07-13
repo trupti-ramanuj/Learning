@@ -29,6 +29,7 @@ body {
 
 .container .card {
     max-width: 750px;
+    height: 500px;
     display: flex;
     background: var(--primery-White);
     border-radius: 15px;
@@ -40,6 +41,9 @@ body {
 
 img {
     width: 100%;
+    margin: 0;
+    height: 500px;
+    padding: 0;
     border-radius: 15px 0px 0px 15px;
 }
 
@@ -144,6 +148,10 @@ button {
         display: block;
         flex-direction: column;
         margin: 30px;
+    }
+
+    .container .card {
+        height: 1000px;
     }
 
     img {
