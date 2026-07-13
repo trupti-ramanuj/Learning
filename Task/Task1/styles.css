@@ -1,0 +1,82 @@
+:root {
+    --primery-Gold: hsl(31, 77%, 52%);
+    --primery-Cyan: hsl(184, 100%, 22%);
+    --primery-Green: hsl(179, 100%, 13%);
+    --primery-Transparent: hsla(0, 0%, 100%, 0.75);
+    --primery-Gray: hsl(0, 0%, 95%);
+
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.card-container {
+    width: 85%;
+    height: 600px;
+    margin: 100px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    flex: 300px;
+    padding: 30px;
+    background: var(--primery-Gray);
+    text-align: left;
+    cursor: pointer;
+}
+
+.card h2 {
+    font-size: 38px;
+    margin: 20px 0px 20px 0px;
+    color: var(--primery-Gray);
+}
+
+.card p {
+    color: var(--primery-Transparent);
+    font-size: 30px;
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+button {
+    width: 300px;
+    height: 60px;
+    border-radius: 30px;
+    margin: 20px;
+    border: 0;
+    outline: 0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 50px;
+    background-color: var(--primery-Gray);
+}
+
+.one {
+    color: var(--primery-Gold);
+}
+
+.two {
+    color: var(--primery-Cyan);
+}
+
+.three {
+    color: var(--primery-Green);
+}
+
+.card1 {
+    background: var(--primery-Gold);
+}
+
+.card2 {
+    background: var(--primery-Cyan);
+}
+
+.card3 {
+    background: var(--primery-Green);
+}
