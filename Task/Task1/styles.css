@@ -96,7 +96,7 @@ button {
 
 }
 
-/*  */
+
 
 @media (max-width:992px) {
     .card-container {
@@ -125,6 +125,8 @@ button {
 @media screen and (max-width:768px) {
     .card-container {
         flex-direction: column;
+        justify-content: center;
+        align-content: center;
         max-width: 400px;
     }
 
