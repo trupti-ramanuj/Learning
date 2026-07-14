@@ -14,18 +14,17 @@
     font-family: sans-serif;
 }
 
-.body {
+body {
     background: var(--primery-Gray);
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px 15px;
 }
 
 .card-container {
     max-width: 1100px;
-    margin: 100px auto;
+    margin: 10px;
     border-radius: 10px;
     overflow: hidden;
     display: flex;
@@ -94,9 +93,6 @@ button {
 }
 
 @media (max-width:1090px) {
-    .card-container {
-        margin: 35px 25px;
-    }
 
     .card {
         padding: 35px 25px;
@@ -119,9 +115,7 @@ button {
 
 
 @media (max-width:992px) {
-    .card-container {
-        margin: 35px 25px;
-    }
+
 
     .card {
         padding: 35px 25px;
@@ -144,15 +138,9 @@ button {
 
 @media screen and (max-width:768px) {
     body {
-        padding: 50px 140px;
+        height: 600px;
     }
 
-    .card-container {
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-        max-width: 400px;
-    }
 
     .card {
         width: 100%;
@@ -172,14 +160,21 @@ button {
     }
 }
 
-@media (max-width:480px) {
+@media (max-width:570px) {
 
     body {
-        padding: 20px 10px;
+        height: 600px;
     }
 
     .card {
         padding: 25px 20px;
+    }
+
+    .card-container {
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        width: 400px;
     }
 
     .card img {
@@ -197,5 +192,50 @@ button {
     button {
         font-size: 0.9rem;
         padding: 14px;
+    }
+}
+
+
+
+@media (max-width:480px) {
+
+    body {
+        padding: 20px;
+        height: 600px;
+    }
+
+    .card {
+        padding: 25px 20px;
+    }
+
+    .card-container {
+        width: 400px;
+    }
+
+    .card img {
+        width: 50px;
+    }
+
+    .card h2 {
+        font-size: 1.5rem;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 14px;
+    }
+}
+
+@media (max-width:320px) {
+    body {
+        height: 600px;
+    }
+
+    .card-container {
+        max-width: 315px;
     }
 }
