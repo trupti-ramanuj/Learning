@@ -36,7 +36,7 @@
  }
 
  .card-image {
-     background-image: url('/task0/images/image-header-mobile.jpg');
+     background-image: url('/Task0/public/images/image-header-mobile.jpg');
      background-size: cover;
      background-position: center;
      height: 240px;
@@ -112,7 +112,7 @@
      }
 
      .card-image {
-         background-image: url('/task0/images/image-header-desktop.jpg');
+         background-image: url('/Task0/public/images/image-header-desktop.jpg');
      }
 
      .card-content {
