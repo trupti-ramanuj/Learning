@@ -36,7 +36,7 @@
  }
 
  .card-image {
-     background-image: url('/Task0/public/images/image-header-mobile.jpg');
+     background-image: url('public/images/image-header-mobile.jpg');
      background-size: cover;
      background-position: center;
      height: 240px;
@@ -51,6 +51,7 @@
      height: 100%;
      background-color: var(--primery-Purple);
      mix-blend-mode: multiply;
+     opacity: 0.75;
  }
 
  .card-content {
@@ -96,13 +97,14 @@
      margin-top: 4px;
  }
 
- @media (min-width: 900px) {
+ @media (min-width: 768px) {
 
      .card-container {
          max-width: 1110px;
          flex-direction: row-reverse;
          text-align: left;
          height: 446px;
+
      }
 
      .card-image,
@@ -112,20 +114,23 @@
      }
 
      .card-image {
-         max-width: 50%;
+         width: 50%;
+         min-width: 50%;
          background-image: url('/Task0/public/images/image-header-desktop.jpg');
+         background-size: cover;
+         background-position: center;
      }
 
      .card-content {
-         max-width: 50%;
+         width: 50%;
+         padding: 40px;
          display: flex;
          flex-direction: column;
          justify-content: space-between;
      }
 
      .card-title {
-         font-size: 2.25rem;
-         margin-bottom: 0;
+         font-size: 2.5rem;
      }
 
      .card-description {
@@ -136,5 +141,19 @@
      .card-stats {
          flex-direction: row;
          gap: 40px;
+     }
+ }
+
+ @media (min-width: 1440px) {
+     .card-container {
+         max-width: 1110px;
+     }
+
+     .card-content {
+         padding: 40px;
+     }
+
+     .card-title {
+         font-size: 2.5rem;
      }
  }

@@ -26,7 +26,7 @@ body {
 }
 
 .container .card {
-    max-width: 750px;
+    width: 750px;
     height: 500px;
     display: flex;
     background: var(--primery-White);
@@ -61,7 +61,7 @@ img {
 .h1 {
     font-size: 40px;
     font-weight: 700;
-    margin: 20px 0px;
+    /* margin: 20px 0px; */
     font-family: Fraunces, sans-serif;
     color: var(--primery-Black);
     line-height: 40px;
@@ -74,13 +74,11 @@ img {
     font-family: Montserrat, sans-serif;
     word-spacing: 1px;
     text-align: left;
-
     line-height: 25px;
 }
 
 .footer {
     display: flex;
-
 }
 
 .h2 {
@@ -89,7 +87,7 @@ img {
 }
 
 span {
-    margin: 10px;
+    /* margin: 10px; */
     color: var(--primery-Grey);
 
 }
@@ -98,7 +96,7 @@ button {
     width: 300px;
     height: 50px;
     border-radius: 5px;
-    margin-top: 35px;
+    /* margin-top: 35px; */
     border: 0;
     outline: 0;
     font-size: 20px;
@@ -113,7 +111,7 @@ button {
 #cart {
     width: 20px;
     height: 20px;
-    text-align: left;
+    margin: 10px;
 }
 
 
@@ -125,7 +123,7 @@ button {
     }
 
     .right {
-        max-width: 80%;
+        width: 80%;
     }
 
     .h1 {
@@ -139,6 +137,7 @@ button {
     button {
         width: 200px;
         font-size: 15px;
+        margin: 10px;
     }
 
 }
@@ -146,6 +145,7 @@ button {
 @media screen and (max-width: 600px) {
     .container {
         height: 1500px;
+        margin: 30px;
     }
 
     .card {
@@ -189,15 +189,20 @@ button {
 @media screen and (max-width: 536px) {
     .container {
         height: 1500px;
+        margin: 30px;
     }
 
     .card {
+
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .container .card {
         height: 1200px;
+
     }
 
     img {
@@ -220,6 +225,54 @@ button {
     button {
         width: 200px;
         font-size: 15px;
+
+    }
+
+    #cart {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .container {
+        height: 1500px;
+
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container .card {
+        height: 1200px;
+
+    }
+
+    img {
+        border-radius: 15px 15px 0px 0px;
+
+    }
+
+    .one {
+        letter-spacing: 1px;
+    }
+
+    .h1 {
+        font-size: 25px;
+    }
+
+    .two {
+        font-size: 13px;
+    }
+
+    button {
+        width: 200px;
+        font-size: 15px;
+
     }
 
     #cart {
