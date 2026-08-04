@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <nav class="bg-blue-600 text-white p-4">
+
+        <div class="container mx-auto flex justify-between items-center">
+
+            <h1 class="text-2xl font-bold">
+                Logo
+            </h1>
+
+            <ul class="flex gap-6">
+
+                <li><a href="#">Home</a></li>
+
+                <li><a href="#">About</a></li>
+
+                <li><a href="#">Services</a></li>
+
+                <li><a href="#">Contact</a></li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+    <section class="text-center py-20 bg-gray-100">
+
+        <h1 class="text-5xl font-bold">
+            Welcome
+        </h1>
+
+        <p class="mt-5 text-gray-600">
+            Learn Tailwind CSS Easily
+        </p>
+
+        <button class="mt-8 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-800 transition">
+
+            Get Started
+
+        </button>
+
+    </section>
+
+    <section class="container mx-auto py-16">
+
+        <h2 class="text-3xl font-bold text-center">
+
+            Features
+
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-6 mt-10">
+
+            <div class="shadow-lg rounded-lg p-6">
+
+                <h3 class="text-xl font-bold">
+                    Fast
+                </h3>
+
+                <p>
+                    Tailwind is very fast.
+                </p>
+
+            </div>
+
+            <div class="shadow-lg rounded-lg p-6">
+
+                <h3 class="text-xl font-bold">
+                    Responsive
+                </h3>
+
+                <p>
+                    Works on every device.
+                </p>
+
+            </div>
+
+            <div class="shadow-lg rounded-lg p-6">
+
+                <h3 class="text-xl font-bold">
+                    Easy
+                </h3>
+
+                <p>
+                    Easy to learn.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="min-h-screen flex items-center justify-center bg-gray-100">
+
+        <div class="bg-white p-8 rounded-xl shadow-lg w-96">
+
+            <h2 class="text-3xl font-bold text-center">
+
+                Login
+
+            </h2>
+
+            <input type="email" placeholder="Email" class="w-full border p-3 mt-6 rounded">
+
+            <input type="password" placeholder="Password" class="w-full border p-3 mt-4 rounded">
+
+            <button class="w-full mt-6 bg-blue-600 text-white p-3 rounded hover:bg-blue-700">
+
+                Login
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="max-w-sm mx-auto mt-20 shadow-lg rounded-xl overflow-hidden">
+
+        <img src="https://picsum.photos/400/300" class="w-full">
+
+        <div class="p-6">
+
+            <h2 class="text-2xl font-bold">
+
+                John Doe
+
+            </h2>
+
+            <p class="text-gray-600">
+
+                Frontend Developer
+
+            </p>
+
+            <button class="mt-5 bg-blue-500 text-white px-5 py-2 rounded hover:bg-blue-700">
+
+                Follow
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="max-w-sm mx-auto mt-20 shadow-xl rounded-xl p-8">
+
+        <h2 class="text-3xl font-bold">
+
+            Pro Plan
+
+        </h2>
+
+        <p class="text-5xl mt-6">
+
+            $29
+
+        </p>
+
+        <ul class="mt-6 space-y-3">
+
+            <li>✔ Unlimited Users</li>
+
+            <li>✔ Free Support</li>
+
+            <li>✔ Cloud Storage</li>
+
+        </ul>
+
+        <button class="mt-8 bg-green-500 w-full p-3 rounded text-white">
+
+            Buy Now
+
+        </button>
+
+    </div>
+
+    <div class="flex min-h-screen">
+
+        <aside class="w-64 bg-gray-900 text-white p-6">
+
+            Dashboard
+
+        </aside>
+
+        <div class="flex-1">
+
+            <header class="bg-white shadow p-5">
+
+                Header
+
+            </header>
+
+            <main class="grid md:grid-cols-3 gap-6 p-6">
+
+                <div class="bg-blue-300 p-6 rounded">
+
+                    Card 1
+
+                </div>
+
+                <div class="bg-green-300 p-6 rounded">
+
+                    Card 2
+
+                </div>
+
+                <div class="bg-red-300 p-6 rounded">
+
+                    Card 3
+
+                </div>
+
+            </main>
+
+        </div>
+
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-5">
+
+        <img src="https://picsum.photos/200?1" class="rounded-lg">
+
+        <img src="https://picsum.photos/200?2" class="rounded-lg">
+
+        <img src="https://picsum.photos/200?3" class="rounded-lg">
+
+        <img src="https://picsum.photos/200?4" class="rounded-lg">
+
+    </div>
+
+    <nav class="bg-gray-900 text-white">
+
+        <div class="container mx-auto flex justify-between items-center p-5">
+
+            <h1 class="text-2xl">
+
+                Logo
+
+            </h1>
+
+            <div class="hidden md:flex gap-6">
+
+                <a href="#">Home</a>
+
+                <a href="#">About</a>
+
+                <a href="#">Contact</a>
+
+            </div>
+
+            <button class="md:hidden">
+
+                ☰
+
+            </button>
+
+        </div>
+
+    </nav>
+
+    <!-- <div class="fixed inset-0 bg-black/50 flex justify-center items-center">
+
+        <div class="bg-white p-6 rounded-xl w-96">
+
+            <h2 class="text-2xl font-bold">
+
+                Delete?
+
+            </h2>
+
+            <p class="mt-3">
+
+                Are you sure?
+
+            </p>
+
+            <div class="flex justify-end gap-4 mt-6">
+
+                <button class="px-4 py-2">
+
+                    Cancel
+
+                </button>
+
+                <button class="bg-red-500 text-white px-4 py-2 rounded">
+
+                    Delete
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div> -->
+
+    <div class="max-w-sm shadow-lg rounded-xl overflow-hidden">
+
+        <img src="https://picsum.photos/400" class="w-full h-60 object-cover">
+
+        <div class="p-5">
+
+            <h2 class="text-xl font-bold">
+
+                Gaming Laptop
+
+            </h2>
+
+            <p class="text-gray-600 mt-2">
+
+                ₹75,000
+
+            </p>
+
+            <button class="bg-blue-600 text-white mt-5 px-4 py-2 rounded">
+
+                Add to Cart
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <footer class="bg-gray-900 text-white py-10">
+
+        <div class="container mx-auto grid md:grid-cols-4 gap-8">
+
+            <div>
+
+                <h2 class="text-xl font-bold">
+
+                    Company
+
+                </h2>
+
+            </div>
+
+            <div>
+
+                <h2 class="text-xl font-bold">
+
+                    Products
+
+                </h2>
+
+            </div>
+
+            <div>
+
+                <h2 class="text-xl font-bold">
+
+                    Support
+
+                </h2>
+
+            </div>
+
+            <div>
+
+                <h2 class="text-xl font-bold">
+
+                    Contact
+
+                </h2>
+
+            </div>
+
+        </div>
+
+    </footer>
+</body>
+
+</html>
