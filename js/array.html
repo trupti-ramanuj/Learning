@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var no = [1, 2, 3, 4, 5];
+        document.write(no, "<br>");//1,2,3,4,5
+
+        var name = ["radha", "mira", "janki", "sita", "gita"];
+        document.write(name, "<br>");//radha,mira,janki,sita,gita
+
+        var data = [1, "sunday", 74.1, "true"];
+        document.write(data, "<br>");//1,sunday,74.1,true
+
+        var list = [1, 2, 3, 4, 5];
+
+        document.write(list[0], "<br>");//1
+
+        document.write(list[2], "<br>");//3
+
+        document.write(list[1], "<br>");//2
+
+        document.write(list[4], "<br>");//5
+
+        document.write(list[3], "<br>");//4
+
+        document.write(list[0], list[2], list[1], list[4], list[3], "<br>");//13254
+
+        var program1 = [1, 2, 3, 4, 5];
+        document.write(program1.length, "<br>");//5
+
+        var fruit = ["banana", "mango", "cherry", "apple", "orange"];
+        document.write(fruit.length, "<br>");//5
+
+        var company = [80, 60, 40, 70];
+        document.write(company, "<br>");//80,60,40,70
+
+        delete company[1];
+        document.write(company, "<br>");//80,,40,70
+
+        delete company[0];
+        document.write(company, "<br>");//,,40,70
+
+        var file = [1, 2, 3, 4, 5, 6, 7];
+        var key = file.join("-");
+
+        document.write(key, "<br>");//1-2-3-4-5-6-7
+
+        var d = [1, 2, 3, 4];
+        var t = d.pop();
+        document.write(t, "<br>");//4
+
+        var board = [1, 5, 9, 7];
+        document.write(board, "<br>");//1,5,9,7
+        board.pop();
+        document.write(board, "<br>");//1,5,9
+
+        var h = [2, 4, 6];
+        h.push(9);
+        document.write(h, "<br>");//2,4,6,9
+
+        var studio = [7, 4, 5, 8];
+        document.write(studio, "<br>");//7,4,5,8
+        studio.push(0);
+        document.write(studio, "<br>");//7,4,5,8,0
+
+        var k = [1, 4, 8, 19];
+        k.shift();
+        document.write(k, "<br>");//4,8,19
+
+        var j = [1, 2, 3, 4];
+        j.unshift(8);
+        document.write(j, "<br>");//8,1,2,3,4
+
+        var company = [80, 60, 40, 70];
+        document.write(company, "<br>");//80,60,40,70
+        delete company[1];
+        document.write(company, "<br>");//80,40,70
+
+
+        var a = [1, 2];
+        var b = [3, 4];
+        document.write(a, "<br>");//1,2
+        document.write(b, "<br>");//3,4
+
+        var r = a.concat(b);
+        document.write(r, "<br>");//1,2,3,4
+
+        var lata = [80, 1, 4, 19, 24, 20];
+        data.sort();
+        document.write(lata, "<br>");//80,1,4,19,24,20
+
+        var and = [70, 5, 99, 42, 11, 37];
+        and.reverse();
+        document.write(and, "<br>");//37,11,42,99,5,70
+
+        var data = [40, 97, 64, 24, 10, 68];
+        var w = data.slice(3, 6);
+        document.write(w, "<br>");//24,10,68
+
+
+        var fruits = ["Apple", "Banana", "Orange"];
+
+        console.log(fruits[0]);
+        console.log(fruits[1]);
+        console.log(fruits[2]);
+
+        var fruits = ["Apple", "Banana", "Orange"];
+
+
+        var fruits = ["Apple", "Banana", "Orange"];
+
+        fruits[1] = "Mango";
+
+        console.log(fruits);
+
+        var data = [
+            "Trupti",
+            21,
+            true,
+            null,
+            { city: "Ahmedabad" }
+        ];
+
+        console.log(data);
+
+
+        //array methods
+        var fruits = ["Apple", "Banana"];
+
+        fruits.push("Orange");
+
+        console.log(fruits);
+        var fruits = ["Apple", "Banana", "Orange"];
+
+        fruits.pop();
+
+        console.log(fruits);
+
+        var fruits = ["Banana", "Orange"];
+
+        fruits.unshift("Apple");
+
+        console.log(fruits);
+        var fruits = ["Apple", "Banana", "Orange"];
+
+        fruits.shift();
+
+        console.log(fruits);
+        var fruits = ["Apple", "Banana", "Orange", "Mango"];
+
+        fruits.splice(1, 2);
+
+        console.log(fruits);
+
+        var fruits = ["Apple", "Orange"];
+
+        fruits.splice(1, 0, "Banana");
+
+        console.log(fruits);
+        var fruits = ["Apple", "Banana", "Orange"];
+
+        fruits.splice(1, 1, "Mango");
+
+        console.log(fruits);
+
+        var fruits = ["Apple", "Banana", "Orange", "Mango"];
+
+        var result = fruits.slice(1, 3);
+
+        console.log(result);
+        console.log(fruits);
+
+        var fruits = ["Apple", "Banana", "Orange"];
+
+        console.log(fruits.indexOf("Banana"));
+        console.log(fruits.indexOf("Mango"));
+
+
+        var fruits = ["Apple", "Banana", "Orange"];
+
+        console.log(fruits.includes("Orange"));
+
+
+        //loop through array
+        var fruits = ["Apple", "Banana", "Orange"];
+
+        for (var i = 0; i < fruits.length; i++) {
+
+            console.log(fruits[i]);
+
+        }
+        var fruits = ["Apple", "Banana", "Orange"];
+
+        for (var fruit of fruits) {
+
+            console.log(fruit);
+
+        }
+        var fruits = ["Apple", "Banana", "Orange"];
+
+        fruits.forEach(function (fruit) {
+
+            console.log(fruit);
+
+        });
+
+        fruits.forEach(fruit => console.log(fruit));
+
+        var numbers = [1, 2, 3, 4];
+
+        var square = numbers.map(num => num * num);
+
+        console.log(square);
+
+        var numbers = [10, 15, 20, 25, 30];
+
+        var even = numbers.filter(num => num % 2 === 0);
+
+        console.log(even);
+
+        var users = [
+            { id: 1, name: "Rahul" },
+            { id: 2, name: "Trupti" },
+            { id: 3, name: "Priya" }
+        ];
+
+        var user = users.find(u => u.id === 2);
+
+        console.log(user);
+
+        let numbers = [2, 4, 6, 7];
+
+        console.log(numbers.some(num => num % 2 !== 0));
+
+        let numbers = [2, 4, 6, 8];
+
+        console.log(numbers.every(num => num % 2 === 0));
+
+        let numbers = [10, 20, 30];
+
+        let total = numbers.reduce((sum, num) => {
+
+            return sum + num;
+
+        }, 0);
+
+        console.log(total);
+
+        //array destructuring
+    </script>
+</body>
+
+</html>
