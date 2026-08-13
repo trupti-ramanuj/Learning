@@ -235,17 +235,17 @@
 
         console.log(user);
 
-        let numbers = [2, 4, 6, 7];
+        var numbers = [2, 4, 6, 7];
 
         console.log(numbers.some(num => num % 2 !== 0));
 
-        let numbers = [2, 4, 6, 8];
+        var numbers = [2, 4, 6, 8];
 
         console.log(numbers.every(num => num % 2 === 0));
 
-        let numbers = [10, 20, 30];
+        var numbers = [10, 20, 30];
 
-        let total = numbers.reduce((sum, num) => {
+        var total = numbers.reduce((sum, num) => {
 
             return sum + num;
 
@@ -254,6 +254,9 @@
         console.log(total);
 
         //array destructuring
+        var a, b, rest;
+        [a, b] = [10, 20];
+
     </script>
 </body>
 

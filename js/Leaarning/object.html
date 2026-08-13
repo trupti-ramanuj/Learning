@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var student = {
+            name: "Trupti",
+            age: 21,
+            city: "Ahmedabad",
+            course: "B.Sc CA & IT"
+        };
+        console.log(student);
+        var student = {
+            name: "Trupti"
+        };
+
+        student.age = 21;
+
+        console.log(student);
+        var student = {
+            name: "Trupti",
+            age: 21
+        };
+
+        student.age = 22;
+
+        console.log(student);
+        var student = {
+            name: "Trupti",
+            age: 21
+        };
+
+        delete student.age;
+
+        console.log(student);
+        var person = {
+            name: "Trupti",
+            age: 21,
+            isStudent: true,
+            hobbies: ["Coding", "Reading"],
+            address: {
+                city: "Ahmedabad",
+                state: "Gujarat"
+            }
+        };
+
+        console.log(person);
+
+        //method
+        var person = {
+            greet: function () {
+                console.log("Hello");
+            }
+        };
+        var person = {
+            greet() {
+                console.log("Hello");
+            }
+        };
+
+        person.greet();
+
+        //this
+        var person = {
+            name: "Trupti",
+
+            greet() {
+                console.log("Hello " + this.name);
+            }
+        };
+
+        person.greet();
+
+        //nested object
+        var student = {
+            name: "Trupti",
+
+            address: {
+                city: "Ahmedabad",
+                state: "Gujarat",
+                country: "India"
+            }
+        };
+
+        console.log(student.address.city);
+
+
+        //looping
+
+        var student = {
+            name: "Trupti",
+            age: 21,
+            city: "Ahmedabad"
+        };
+
+        for (let key in student) {
+            console.log(key, student[key]);
+        }
+
+        //Bracket Notation
+        var student = {
+            name: "Trupti",
+            age: 21
+        };
+
+        console.log(student["name"]);
+        console.log(student["age"]);
+
+        var student = {
+            name: "Trupti",
+            age: 21
+        };
+
+        var key = "name";
+
+        console.log(student[key]);
+        var person = {
+            "first name": "Trupti"
+        };
+
+        console.log(person["first name"]);
+        //Object Destructuring
+        var student = {
+            name: "Trupti",
+            age: 21
+        };
+
+        var { name, age } = student;
+
+        console.log(name);
+        console.log(age);
+
+        var student = {
+            name: "Trupti",
+            age: 21
+        };
+
+        var { name: studentName } = student;
+
+        console.log(studentName);
+
+        var student = {
+            name: "Trupti"
+        };
+
+        var { age = 18 } = student;
+
+        console.log(age);
+
+        //bject.keys() Object.values() Object.entries()
+        var student = {
+            name: "Trupti",
+            age: 21
+        };
+
+        console.log(Object.keys(student));
+        console.log(Object.values(student));
+        console.log(Object.entries(student));
+
+
+        var student = {
+            name: "Trupti"
+        };
+
+        console.log("name" in student);
+        console.log("age" in student);
+
+        var student = {
+            name: "Trupti",
+            marks: [90, 85, 95],
+
+            getAverage() {
+                var total = this.marks.reduce((sum, mark) => sum + mark, 0);
+                return total / this.marks.length;
+            }
+        };
+
+        console.log(student.getAverage());
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

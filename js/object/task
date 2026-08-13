@@ -1,0 +1,927 @@
+# JavaScript Objects — Practical Assignment
+
+## Objective
+
+Build a small Student Management System using JavaScript Objects.
+
+This assignment is designed to strengthen your understanding of:
+
+- Creating objects
+- Accessing object properties
+- Updating objects
+- Adding and deleting properties
+- Dynamic property access
+- Nested objects
+- Arrays of objects
+- Searching objects
+- Filtering objects
+- Transforming objects
+- Grouping objects
+- Basic object-based business logic
+
+---
+
+## Rules
+
+1. Use JavaScript only.
+2. Do not use external libraries.
+3. Do not use classes.
+4. Do not use Map or Set.
+5. Do not use JSON methods for solving the tasks.
+6. Do not hardcode expected results.
+7. Use functions wherever requested.
+8. Do not modify the original data unless explicitly required.
+9. Test every function with multiple inputs.
+10. Handle invalid and missing data where mentioned.
+11. Keep the code clean and readable.
+12. You must be able to explain your solution.
+
+---
+
+# Task 1 — Student Object
+
+Create the following object:
+
+const student = {
+  id: 101,
+  name: "Rahul",
+  age: 20,
+  course: "JavaScript",
+  city: "Ahmedabad",
+  isActive: true
+};
+
+Perform the following:
+
+1. Print the student's name.
+2. Print the student's age.
+3. Print the student's course.
+4. Change the student's age to 21.
+5. Change the student's city to Mumbai.
+6. Add an email property.
+7. Delete the isActive property.
+8. Print the final object.
+
+---
+
+# Task 2 — Dynamic Property Access
+
+Use the following object:
+
+const student = {
+  name: "Rahul",
+  age: 20,
+  city: "Ahmedabad",
+  course: "JavaScript"
+};
+
+Create:
+
+const propertyName = "city";
+
+Use propertyName to access the student's city.
+
+Then change propertyName to "course" and access the course dynamically.
+
+Create the function:
+
+getProperty(obj, propertyName)
+
+Examples:
+
+getProperty(student, "name");
+getProperty(student, "age");
+getProperty(student, "city");
+getProperty(student, "course");
+
+The function should work with any object.
+
+Also test what happens when the property does not exist.
+
+---
+
+# Task 3 — Student Marks
+
+Create:
+
+const student = {
+  id: 101,
+  name: "Rahul",
+  marks: {
+    math: 80,
+    science: 75,
+    english: 90
+  }
+};
+
+Perform the following:
+
+1. Print every subject's marks.
+2. Change math marks to 85.
+3. Add a new subject called computer with marks 95.
+4. Calculate the total marks.
+5. Calculate the average marks.
+6. Add total to the student object.
+7. Add average to the student object.
+
+Do not hardcode each subject while calculating the total.
+
+---
+
+# Task 4 — Student Result
+
+Using the student from Task 3, calculate the result.
+
+Rules:
+
+Average >= 80  -> Excellent
+Average >= 60  -> Good
+Average >= 40  -> Pass
+Average < 40   -> Fail
+
+Add the result property to the student object.
+
+Example:
+
+{
+  id: 101,
+  name: "Rahul",
+  marks: {
+    math: 85,
+    science: 75,
+    english: 90,
+    computer: 95
+  },
+  total: 345,
+  average: 86.25,
+  result: "Excellent"
+}
+
+---
+
+# Task 5 — Array of Students
+
+Create:
+
+const students = [
+  {
+    id: 1,
+    name: "Rahul",
+    age: 20,
+    course: "JavaScript",
+    marks: 85
+  },
+  {
+    id: 2,
+    name: "Priya",
+    age: 21,
+    course: "JavaScript",
+    marks: 92
+  },
+  {
+    id: 3,
+    name: "Amit",
+    age: 19,
+    course: "React",
+    marks: 65
+  },
+  {
+    id: 4,
+    name: "Neha",
+    age: 22,
+    course: "Node.js",
+    marks: 38
+  },
+  {
+    id: 5,
+    name: "Raj",
+    age: 20,
+    course: "JavaScript",
+    marks: 74
+  }
+];
+
+Perform the following:
+
+1. Print every student's name.
+2. Print every student's name and marks.
+3. Print the total number of students.
+4. Print all students studying JavaScript.
+5. Print all students older than 20.
+
+---
+
+# Task 6 — Find Students
+
+Create:
+
+findStudentById(students, id)
+
+Example:
+
+findStudentById(students, 3);
+
+Return the student with ID 3.
+
+Also create:
+
+findStudentByName(students, name)
+
+Example:
+
+findStudentByName(students, "Amit");
+
+Also create:
+
+findStudentsByCourse(students, course)
+
+Example:
+
+findStudentsByCourse(students, "JavaScript");
+
+Handle cases where no student is found.
+
+---
+
+# Task 7 — Filter Students
+
+Using the students array, find:
+
+1. Students who passed.
+2. Students who failed.
+3. Students with marks >= 80.
+4. Students younger than 21.
+5. Students studying JavaScript.
+6. Students studying React.
+
+Passing criteria:
+
+marks >= 40
+
+---
+
+# Task 8 — Update Student
+
+Create:
+
+updateStudent(students, id, property, value)
+
+Example:
+
+updateStudent(students, 1, "age", 21);
+
+The student's age should become 21.
+
+Test the function by updating:
+
+1. Age
+2. Name
+3. Course
+4. Marks
+
+Also test what happens when:
+
+- Student ID does not exist.
+- Property does not exist.
+
+---
+
+# Task 9 — Add Student
+
+Create:
+
+addStudent(students, student)
+
+Example:
+
+addStudent(students, {
+  id: 6,
+  name: "Karan",
+  age: 21,
+  course: "Python",
+  marks: 88
+});
+
+Requirements:
+
+1. Add the student to the array.
+2. Student IDs must be unique.
+3. Do not allow duplicate IDs.
+4. Handle invalid student data.
+
+---
+
+# Task 10 — Remove Student
+
+Create:
+
+removeStudent(students, id)
+
+Example:
+
+removeStudent(students, 3);
+
+Requirements:
+
+1. Remove the student with the given ID.
+2. Do nothing if the student doesn't exist.
+3. Make sure the correct student is removed.
+
+---
+
+# Task 11 — Student Statistics
+
+Using the students array:
+
+1. Find the student with the highest marks.
+2. Find the student with the lowest marks.
+3. Calculate the average marks.
+4. Calculate the total marks.
+5. Count the number of students who passed.
+6. Count the number of students who failed.
+
+---
+
+# Task 12 — Student Summary
+
+Create:
+
+createStudentSummary(student)
+
+Input:
+
+{
+  id: 1,
+  name: "Rahul",
+  age: 20,
+  course: "JavaScript",
+  marks: 85
+}
+
+Expected output:
+
+{
+  id: 1,
+  name: "Rahul",
+  course: "JavaScript",
+  result: "Pass"
+}
+
+Do not include age or marks in the result.
+
+Do not modify the original student object.
+
+---
+
+# Task 13 — Nested Object
+
+Create:
+
+const student = {
+  id: 101,
+  name: "Rahul",
+
+  personal: {
+    age: 20,
+    gender: "Male"
+  },
+
+  contact: {
+    email: "rahul@gmail.com",
+    phone: "9999999999"
+  },
+
+  address: {
+    city: "Ahmedabad",
+    state: "Gujarat",
+    country: "India"
+  },
+
+  education: {
+    course: "BCA",
+    university: "ABC University"
+  }
+};
+
+Perform the following:
+
+1. Print the student's age.
+2. Print the student's email.
+3. Print the student's phone.
+4. Print the student's city.
+5. Print the student's state.
+6. Print the student's course.
+7. Print the student's university.
+8. Change the city.
+9. Change the university.
+10. Add pincode inside address.
+11. Add graduationYear inside education.
+
+---
+
+# Task 14 — Extract Nested Data
+
+Using the student from Task 13, create:
+
+getStudentContact(student)
+
+Expected:
+
+{
+  name: "Rahul",
+  email: "rahul@gmail.com",
+  phone: "9999999999"
+}
+
+Create:
+
+getStudentAddress(student)
+
+Expected:
+
+{
+  city: "Ahmedabad",
+  state: "Gujarat",
+  country: "India"
+}
+
+Create:
+
+getStudentEducation(student)
+
+Expected:
+
+{
+  course: "BCA",
+  university: "ABC University"
+}
+
+Do not modify the original student object.
+
+---
+
+# Task 15 — Product Management
+
+Create:
+
+const products = [
+  {
+    id: 1,
+    name: "Laptop",
+    price: 70000,
+    stock: 5
+  },
+  {
+    id: 2,
+    name: "Mouse",
+    price: 1500,
+    stock: 20
+  },
+  {
+    id: 3,
+    name: "Keyboard",
+    price: 3000,
+    stock: 0
+  },
+  {
+    id: 4,
+    name: "Monitor",
+    price: 15000,
+    stock: 3
+  }
+];
+
+Perform the following:
+
+1. Find a product by ID.
+2. Find all products that are in stock.
+3. Find all products that are out of stock.
+4. Find products costing more than 10,000.
+5. Find the cheapest product.
+6. Find the most expensive product.
+7. Calculate the total value of all available stock.
+
+Formula:
+
+price * stock
+
+---
+
+# Task 16 — Transform Student Objects
+
+Given:
+
+const students = [
+  {
+    id: 1,
+    firstName: "Rahul",
+    lastName: "Patel",
+    marks: 85
+  },
+  {
+    id: 2,
+    firstName: "Priya",
+    lastName: "Shah",
+    marks: 92
+  },
+  {
+    id: 3,
+    firstName: "Amit",
+    lastName: "Mehta",
+    marks: 35
+  }
+];
+
+Transform the data into:
+
+[
+  {
+    id: 1,
+    name: "Rahul Patel",
+    marks: 85,
+    result: "Pass"
+  },
+  {
+    id: 2,
+    name: "Priya Shah",
+    marks: 92,
+    result: "Pass"
+  },
+  {
+    id: 3,
+    name: "Amit Mehta",
+    marks: 35,
+    result: "Fail"
+  }
+]
+
+Do not modify the original students array.
+
+---
+
+# Task 17 — Group Students By Course
+
+Given:
+
+const students = [
+  {
+    name: "Rahul",
+    course: "JavaScript"
+  },
+  {
+    name: "Priya",
+    course: "React"
+  },
+  {
+    name: "Amit",
+    course: "JavaScript"
+  },
+  {
+    name: "Neha",
+    course: "Node.js"
+  },
+  {
+    name: "Raj",
+    course: "React"
+  }
+];
+
+Create:
+
+groupStudentsByCourse(students)
+
+Expected structure:
+
+{
+  JavaScript: [
+    {
+      name: "Rahul",
+      course: "JavaScript"
+    },
+    {
+      name: "Amit",
+      course: "JavaScript"
+    }
+  ],
+
+  React: [
+    {
+      name: "Priya",
+      course: "React"
+    },
+    {
+      name: "Raj",
+      course: "React"
+    }
+  ],
+
+  "Node.js": [
+    {
+      name: "Neha",
+      course: "Node.js"
+    }
+  ]
+}
+
+Do not hardcode the course names.
+
+---
+
+# Task 18 — Object Keys, Values and Entries
+
+Given:
+
+const student = {
+  name: "Rahul",
+  age: 20,
+  course: "JavaScript",
+  city: "Ahmedabad"
+};
+
+Using:
+
+Object.keys()
+Object.values()
+Object.entries()
+
+Perform the following:
+
+1. Print all property names.
+2. Print all property values.
+3. Print each property in this format:
+
+name: Rahul
+age: 20
+course: JavaScript
+city: Ahmedabad
+
+---
+
+# Task 19 — User Profile
+
+Create:
+
+const user = {
+  id: 101,
+  name: "Rahul",
+  email: "rahul@gmail.com",
+  password: "123456",
+  age: 25,
+  city: "Ahmedabad",
+  role: "user",
+  isActive: true
+};
+
+Create:
+
+getPublicProfile(user)
+
+Expected:
+
+{
+  id: 101,
+  name: "Rahul",
+  email: "rahul@gmail.com",
+  city: "Ahmedabad"
+}
+
+The following properties must NOT appear:
+
+password
+age
+role
+isActive
+
+Do not modify the original object.
+
+---
+
+# Task 20 — Shopping Cart
+
+Create:
+
+const cart = {
+  items: []
+};
+
+Each item should contain:
+
+{
+  id: 1,
+  name: "Laptop",
+  price: 70000,
+  quantity: 1
+}
+
+Create the following functions:
+
+addItem(cart, item)
+
+removeItem(cart, id)
+
+increaseQuantity(cart, id)
+
+decreaseQuantity(cart, id)
+
+getTotal(cart)
+
+getItemCount(cart)
+
+Requirements:
+
+1. If a product already exists, increase its quantity.
+2. Do not create duplicate products.
+3. Quantity cannot become negative.
+4. Removing an item should remove the complete item.
+5. getTotal() should calculate:
+
+price * quantity
+
+6. getItemCount() should return the total quantity of all products.
+
+---
+
+# Final Challenge — Student Management System
+
+Create:
+
+const students = [];
+
+Each student must contain:
+
+{
+  id,
+  name,
+  age,
+  course,
+  marks
+}
+
+Implement:
+
+addStudent(students, student)
+
+removeStudent(students, id)
+
+findStudentById(students, id)
+
+findStudentByName(students, name)
+
+updateStudent(students, id, property, value)
+
+getAllStudents(students)
+
+getPassedStudents(students)
+
+getFailedStudents(students)
+
+getTopper(students)
+
+getLowestScorer(students)
+
+getAverageMarks(students)
+
+getStudentsByCourse(students, course)
+
+groupStudentsByCourse(students)
+
+Requirements:
+
+1. Student IDs must be unique.
+2. Marks must be between 0 and 100.
+3. Handle an empty student list.
+4. Handle a student that doesn't exist.
+5. Do not modify the original data unless required.
+6. Do not hardcode student IDs, names, or courses.
+7. Keep each function focused on one responsibility.
+8. Test every function with at least 2 different scenarios.
+
+---
+
+# Bonus Challenges
+
+## Bonus 1 — Find Duplicate Values
+
+Create:
+
+findDuplicateValues(obj)
+
+Example:
+
+const user = {
+  firstName: "Rahul",
+  lastName: "Rahul",
+  city: "Ahmedabad",
+  nickname: "Rahul"
+};
+
+Expected:
+
+[
+  "Rahul"
+]
+
+---
+
+## Bonus 2 — Count Property Values
+
+Given:
+
+const students = [
+  { name: "Rahul", course: "JavaScript" },
+  { name: "Priya", course: "React" },
+  { name: "Amit", course: "JavaScript" },
+  { name: "Neha", course: "React" },
+  { name: "Raj", course: "JavaScript" }
+];
+
+Create:
+
+countByCourse(students)
+
+Expected:
+
+{
+  JavaScript: 3,
+  React: 2
+}
+
+---
+
+## Bonus 3 — Find Common Properties
+
+Given:
+
+const user1 = {
+  name: "Rahul",
+  age: 25,
+  city: "Ahmedabad",
+  role: "Developer"
+};
+
+const user2 = {
+  name: "Priya",
+  age: 24,
+  city: "Mumbai",
+  department: "HR"
+};
+
+Create:
+
+getCommonProperties(user1, user2)
+
+Expected:
+
+[
+  "name",
+  "age",
+  "city"
+]
+
+---
+
+## Bonus 4 — Object Property Search
+
+Create:
+
+searchObject(obj, searchValue)
+
+Example:
+
+const user = {
+  name: "Rahul",
+  city: "Ahmedabad",
+  role: "Developer"
+};
+
+searchObject(user, "Ahmedabad");
+
+Expected:
+
+"city"
+
+If the value does not exist, return:
+
+undefined
+
+---
+
+## Submission
+
+Submit one JavaScript file containing all tasks.
+
+Use comments to separate each task:
+
+// Task 1
+
+// Task 2
+
+// Task 3
+
+...
+
+// Final Challenge
+
+Every function must include test cases.
+
+Be prepared to explain your code and the reason behind your approach.
