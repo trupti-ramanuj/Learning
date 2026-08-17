@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+
+      //increment operators
+      var a = 10;
+      var b;
+      document.write("a=", a, "<br>");//a=10
+      document.write("b=", b, "<br>");//b=undefined
+
+      //preincrement operator
+      b = ++a;
+      document.write("a=", a, "<br>");//a=11
+      document.write("b=", b, "<br>");//b=11
+
+      //postfix increment operator
+      var c;
+      c = a++;
+      document.write("a=", a, "<br>");//a=12
+      document.write("c=", c, "<br>");//c=11
+
+
+      //decrement operators
+      var a = 10;
+      var b;
+      document.write("a=", a, "<br>");//a=10
+      document.write("b=", b, "<br>");//b=11
+
+      //predecrement operator
+      b = --a;
+      document.write("a=", a, "<br>");//a=9
+      document.write("b=", b, "<br>");//b=9
+
+      //postfix decrement operator
+      var c;
+      c = a--;
+      document.write("a=", a, "<br>");//a=8
+      document.write("c=", c);//c=9
+
+      let at = 5;
+      console.log(at++);
+      console.log(++at);
+
+
+      //artheme Operator
+
+      var a = 10;
+      var b = 4;
+      var c;
+
+      c = a + b;
+      document.write(c, "<br>");
+
+      //assignment Operator
+
+      var a = 10;
+      var b = 0;
+
+      document.write(a, "<br>");
+      document.write(b, "<br>");
+
+      b = a;
+      document.write(a, "<br>");
+
+      //Exponentiation
+      console.log(2 ** 3);
+
+      //addtion assignment
+
+      var a = 10;
+      var b = 5;
+
+      document.write(a, "<br>");
+      document.write(b, "<br>");
+
+      a += b;
+      document.write(a, "<br>");
+      document.write(b, "<br>");
+
+      b += a;
+      document.write(a, "<br>");
+      document.write(a, "<br>");
+
+
+      //Relation  Comparison Operators
+      // == is equal to
+
+      var no1 = 20;
+      var no2 = 20;
+      document.write(no1 == no2, "<br>");//true
+
+      var no3 = 20;
+      var no4 = 30;
+      document.write(no3 == no4, "<br>");//false
+
+      // != not equal to
+
+      var no1 = 20;
+      var no2 = 50;
+      document.write(no1 != no2, "<br>");//true
+
+      var no3 = 25;
+      var no4 = 25;
+      document.write(no3 != no4, "<br>");//false
+
+      //=== is equal to datatype and value
+      var no1 = 30;
+      var no2 = 30;
+
+      document.write(no1 === no2, "<br>");//true
+
+      var no1 = 30;
+      var no2 = "30";
+
+      document.write(no1 === no2, "<br>");//false
+
+      var no1 = 30;
+      var no2 = 38;
+
+      document.write(no1 === no2, "<br>");//false
+
+      var no1 = 30;
+      var no2 = "work";
+
+      document.write(no1 === no2, "<br>");//false
+
+      //!== is equal to datatype and value
+      var no1 = 30;
+      var no2 = 30;
+
+      document.write(no1 !== no2, "<br>");//false
+
+      var no1 = 30;
+      var no2 = "30";
+
+      document.write(no1 !== no2, "<br>");//true
+
+      var no1 = 30;
+      var no2 = 38;
+
+      document.write(no1 !== no2, "<br>");//true
+
+      var no1 = 30;
+      var no2 = "work";
+
+      document.write(no1 !== no2, "<br>");//true
+      // < less than
+      var no1 = 30;
+      var no2 = 30;
+
+      document.write(no1 < no2, "<br>");//false
+
+      var a = 85
+      var b = 78;
+
+      document.write(a < b, "<br>");//false
+
+      var c = 30;
+      var d = 38;
+
+      document.write(c < d, "<br>");//true
+      // > greater than
+      var no1 = 30;
+      var no2 = 30;
+
+      document.write(no1 > no2, "<br>");//false
+
+      var a = 85
+      var b = 78;
+
+      document.write(a > b, "<br>");//true
+
+      var c = 30;
+      var d = 38;
+
+      document.write(c > d, "<br>");//false
+
+      // <= less than equal to 
+      var no1 = 20;
+      var no2 = 20;
+
+      document.write(no1 <= no2, "<br>");//true
+
+      var a = 95
+      var b = 88;
+
+      document.write(a <= b, "<br>");//false
+
+      var c = 30;
+      var d = 48;
+
+      document.write(c <= d, "<br>");//true
+
+      // >= greater than equal to
+      var no1 = 20;
+      var no2 = 20;
+
+      document.write(no1 >= no2, "<br>");//true
+
+      var a = 75
+      var b = 68;
+
+      document.write(a >= b, "<br>");//true
+
+      var c = 20;
+      var d = 28;
+
+      document.write(c >= d, "<br>");//false
+
+      // Bitwise Operator
+
+      //& and
+
+      var no1 = 83;
+      var no2 = 27;
+
+      document.write(no1 & no2, "<br>");//19
+
+      var a = 75
+      var b = 68;
+
+      document.write(a & b, "<br>");//64
+
+      var c = 20;
+      var d = 28;
+
+      document.write(c & d, "<br>");//20
+
+      var e = 37;
+      var f = 46;
+      document.write(e & f, "<br>");//36
+
+      var e = 17;
+      var f = 46;
+      document.write(e & f, "<br>");//0
+
+      //| OR
+
+      var no1 = 83;
+      var no2 = 27;
+
+      document.write(no1 | no2, "<br>");//91
+
+      var a = 75
+      var b = 68;
+
+      document.write(a | b, "<br>");//79
+
+      var c = 20;
+      var d = 28;
+
+      document.write(c | d, "<br>");//28
+
+      var e = 37;
+      var f = 46;
+      document.write(e | f, "<br>");//47
+
+      var g = 17;
+      var h = 46;
+      document.write(g | h, "<br>");//63
+
+
+      //^ XOR
+
+      var no1 = 83;
+      var no2 = 27;
+
+      document.write(no1 ^ no2, "<br>");//72
+
+      var a = 75
+      var b = 68;
+
+      document.write(a ^ b, "<br>");//15
+
+      var c = 20;
+      var d = 28;
+
+      document.write(c ^ d, "<br>");//8
+
+      var e = 37;
+      var f = 46;
+      document.write(e ^ f, "<br>");//11
+
+      var g = 17;
+      var h = 46;
+      document.write(g ^ h, "<br>");//63
+
+      //~ NOT
+
+      var a = 40;
+      document.write(~a, "<br>");
+
+      var a = -59;
+      document.write(~a, "<br>");
+
+      var a = 35;
+      document.write(~a, "<br>");
+
+      var a = -5;
+      document.write(~a, "<br>");
+
+      var a = 47;
+      document.write(~a, "<br>");
+
+
+      //<< left shift 
+      var no1 = 87;
+      var no2 = 4;
+
+      document.write(no1 << no2, "<br>");//1392
+
+      var a = 38;
+      var b = 10;
+
+      document.write(a << b, "<br>");//38912
+
+      var c = 20;
+      var d = 8;
+
+      document.write(c << d, "<br>");//5120
+
+      var e = 37;
+      var f = 4;
+      document.write(e << f, "<br>");//592
+
+      var g = 17;
+      var h = 6;
+      document.write(g << h, "<br>");//1088
+
+      //>> right shift
+
+      var no1 = 26;
+      var no2 = 2;
+
+      document.write(no1 >> no2, "<br>");//6
+
+      var a = 81;
+      var b = 7;
+
+      document.write(a >> b, "<br>");//0
+
+      var c = 20;
+      var d = 2;
+
+      document.write(c >> d, "<br>");//5
+
+      var e = 37;
+      var f = 4;
+      document.write(e >> f, "<br>");//2
+
+      var g = 17;
+      var h = 4;
+      document.write(g >> h, "<br>");//1
+
+      //Ternary Operator
+
+      var no1 = 20;
+      var no2 = 20;
+      no1 == no2 ? document.write("true", "<br>") : document.write("False", "<br>");//true
+
+      var no3 = 20;
+      var no4 = 30;
+      no3 == no4 ? document.write("true", "<br>") : document.write("False", "<br>");//false
+
+      var no1 = 20;
+      var no2 = 50;
+      no1 !== no2 ? document.write("true", "<br>") : document.write("False", "<br>");//true
+
+      var no3 = 25;
+      var no4 = 25;
+      no3 !== no4 ? document.write("true", "<br>") : document.write("False", "<br>");//false
+
+      var no1 = 30;
+      var no2 = 30;
+
+      no1 === no2 ? document.write("true", "<br>") : document.write("False", "<br>");//true
+
+      var no1 = 30;
+      var no2 = "30";
+
+      no1 === no2 ? document.write("true", "<br>") : document.write("False", "<br>");//false
+
+
+      var a = 85
+      var b = 78;
+
+      a < b ? document.write("true", "<br>") : document.write("False", "<br>");//false
+
+      var c = 30;
+      var d = 38;
+
+      c < d ? document.write("true", "<br>") : document.write("False", "<br>");//true
+
+      var a = 85
+      var b = 78;
+
+      a > b ? document.write("true", "<br>") : document.write("False", "<br>");//true
+
+      var c = 30;
+      var d = 38;
+
+      c > d ? document.write("true", "<br>") : document.write("False", "<br>");//false
+
+
+      var no1 = 20;
+      var no2 = 20;
+
+      no1 <= no2 ? document.write("true", "<br>") : document.write("False", "<br>");//true
+
+      var a = 95
+      var b = 88;
+
+      a <= b ? document.write("true", "<br>") : document.write("False", "<br>");//false
+
+      var no1 = 20;
+      var no2 = 20;
+
+      no1 >= no2 ? document.write("true", "<br>") : document.write("False", "<br>");//true
+
+      let marks = 75;
+      //Nested Ternary
+      let result =
+         marks >= 90 ? "A" :
+            marks >= 75 ? "B" :
+               marks >= 50 ? "C" :
+                  "Fail";
+
+      console.log(result);
+
+      let cartTotal = 2500;
+      let isMember = true;
+
+      let finalPrice = isMember && cartTotal >= 2000
+         ? cartTotal - 500
+         : cartTotal;
+
+      console.log(finalPrice);
+      //conditional statements
+
+      //if statement
+
+      var a = 10;
+      var b = 10;
+      if (a = b) {
+         document.write("true condition", "<br>");
+      }
+
+      var c = 8;
+      var d = 9;
+      if (c < d) {
+         document.write("d is biggest", "<br>");
+      }
+
+      var c = 25;
+
+      if (c > 18) {
+         document.write("you can vote", "<br>");
+      }
+
+      var c = 15;
+
+      if (c > 18) {
+         document.write("you can vote", "<br>");
+      }
+      else {
+         document.write("you can not vote", "<br>");
+      }
+
+      var no = 89;
+
+      if (no < 80) {
+         document.write("nomber is lass then to 80", "<br>")
+      }
+
+
+      //else if condition
+
+      var a = 0;
+
+      if (a > 0) {
+         document.write("positive");
+      }
+      else if (0 > a) {
+         document.write("negative");
+      }
+      else {
+         document.write("equalto", "<br>");
+      }
+      //swich condition
+
+      var day = 5;
+
+
+      switch (day) {
+         case 1:
+            document.write("sunday");
+            break;
+         case 2:
+            document.write("monday");
+            break;
+         case 3:
+            document.write("tuesday");
+            break;
+         case 4:
+            document.write("wednesday");
+            break;
+         case 5:
+            document.write("thursday");
+            break;
+         case 6:
+            document.write("friday");
+            break;
+         case 7:
+            document.write("saturday");
+            break;
+
+         default:
+            document.write("no day");
+
+
+      }
+      //Logical Operators
+      let username = "admin";
+      let password = "12345";
+
+      if (username === "admin" && password === "12345") {
+         console.log("Login Successful");
+      } else {
+         console.log("Invalid Credentials");
+      }
+
+
+   </script>
+</body>
+
+</html>

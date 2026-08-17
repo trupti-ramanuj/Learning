@@ -19,9 +19,9 @@ const student = {
 
 
 
-console.log(student.name);
-console.log(student["age"]);
-console.log(student.course);
+console.log("Name:", student.name);
+console.log("Age:", student["age"]);
+console.log("Course:", student.course);
 
 student.age = 21;
 console.log(student.age);

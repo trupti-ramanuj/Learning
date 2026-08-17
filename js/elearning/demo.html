@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="demo()">data</button>
+    <h1 id="data1">i reading</h1>
+    <button onclick="dark()">dark</button>
+    <button onclick="light()">light</button>
+    <button onclick="theme()">theme</button>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nisi exercitationem magnam facere earum ratione quas doloribus nam fuga? Voluptatibus dolorum dignissimos officiis id tenetur placeat quidem impedit, vitae asperiores eveniet nostrum sed fuga cum sint nobis! Commodi, maxime veritatis ea vero culpa explicabo amet quos voluptate expedita ipsum non saepe dolor placeat dolorum, autem nisi fugiat repudiandae esse maiores consequuntur minus ipsa, quod odio. Totam autem molestiae at laudantium earum eos ex possimus odit. Impedit iure possimus pariatur voluptatem, earum accusamus non delectus? Dolore perferendis odio excepturi provident quisquam harum, nostrum aspernatur ratione, voluptatum, perspiciatis id quasi. Voluptas, quibusdam.</div>
+    <script>
+        function demo(){
+            document.getElementById("data1").innerHTML="book";
+        }
+        function dark(){
+            document.body.style.backgroundColor="black";
+            document.body.style.color="white";
+        }
+        function light(){
+            document.body.style.backgroundColor="white";
+            document.body.style.color="black";
+        }
+
+        var data=true;
+
+        function theme(){
+            if(data==true){
+                document.body.style.backgroundColor="black";
+                document.body.style.color="white";
+
+                data=false;
+            }
+            else{
+                document.body.style.backgroundColor="white";
+                document.body.style.color="black";
+
+                data=true;
+            }
+        }
+    </script>
+</body>
+</html>
