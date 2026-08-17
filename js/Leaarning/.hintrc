@@ -11,6 +11,7 @@
       }
     ],
     "axe/language": "off",
-    "meta-viewport": "off"
+    "meta-viewport": "off",
+    "no-inline-styles": "off"
   }
 }
