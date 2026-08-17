@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    Onclick
+    <button onclick="showMessage()">Click Me</button>
+    <button id="btne">Click Me</button>
+    <br>
+    Onchange
+    <select id="cty">
+        <option value="">Select City</option>
+        <option value="Ahmedabad">Ahmedabad</option>
+        <option value="Surat">Surat</option>
+        <option value="Rajkot">Rajkot</option>
+    </select>
+
+    <input type="text" id="name">
+    <br>
+    Oninput
+    <input type="text" id="username">
+
+    <p id="results"></p>
+    <br>
+    Onsubmit
+    <form id="myForm">
+
+        <input type="text" id="name" placeholder="Enter name">
+
+        <button type="submit">Submit</button>
+
+    </form>
+    <br>
+    addEventListener()
+    <button id="btn">Click Me</button>
+    <br><br>
+    Multiple Event Listeners
+    <button id="mm">MM</button>
+    <button id="but">DD</button>
+    <br>
+    Event obj
+    <button id="button">click</button>
+    <br>
+    event.target
+    <button id="events">Click Me</button>
+    <br>
+    event.preventDefault()
+    <form id="forms">
+
+        <input type="text" placeholder="Name">
+
+        <button type="submit">Submit</button>
+
+    </form>
+    Event Bubbling
+    <div id="parent">
+        <button id="child">Click Me</button>
+    </div>
+    event.target & event.currentTarget
+    <div id="parent">
+        <button id="child">Click Me</button>
+    </div>
+
+    Event Delegation
+    <ul id="users">
+
+        <li>
+            <button class="user">Trupti</button>
+        </li>
+
+        <li>
+            <button class="user">Rahul</button>
+        </li>
+
+        <li>
+            <button class="user">Priya</button>
+        </li>
+
+    </ul>
+    <ul id="list"></ul>
+    <script>
+        //onclick
+        function showMessage() {
+            alert("Button Clicked!");
+        }
+
+        const btne = document.getElementById("btne");
+
+        btne.onclick = function () {
+            console.log("Button clicked");
+        };
+
+        //onchange
+        const cty = document.getElementById("cty");
+
+        cty.onchange = function () {
+            console.log("Selected city:", cty.value);
+        };
+
+        const nameInput = document.getElementById("name");
+
+        nameInput.onchange = function () {
+            console.log("Value changed:", nameInput.value);
+        };
+        //oninput
+        const username = document.getElementById("username");
+        const results = document.getElementById("results");
+
+        username.oninput = function () {
+            results.textContent = username.value;
+        };
+        //onsubmit
+        const form = document.getElementById("myForm");
+
+        form.onsubmit = function (event) {
+            event.preventDefault();
+            console.log("Form submitted");
+        };
+
+        //addEventListener()
+
+        const btn = document.getElementById("btn");
+
+        btn.addEventListener("click", () => {
+            console.log("Button clicked");
+        });
+        //Multiple Event Listeners
+        // const MM = document.getElementById("MM");
+
+        // MM.addEventListener("click", () => {
+        //     console.log("First function");
+        // });
+
+        // MM.addEventListener("click", () => {
+        //     console.log("Second function");
+        // });
+
+
+        // const DD = document.getElementById("DD");
+
+        // DD.addEventListener("click", () => {
+        //     console.log("Clicked");
+        // });
+
+        // DD.addEventListener("mouseover", () => {
+        //     console.log("Mouse Over");
+        // });
+
+        // DD.addEventListener("mouseout", () => {
+        //     console.log("Mouse Out");
+        // });
+
+        //event obj
+        button.addEventListener("click", (event) => {
+            console.log(event);
+        });
+        button.addEventListener("click", (event) => {
+            console.log(event.type);
+        });
+        //const btn = document.getElementById("btn");
+        //event.target
+        const event = document.getElementById("events");
+
+        event.addEventListener("click", (event) => {
+            console.log(event.target);
+        });
+        const btnu = document.getElementById("events");
+
+        events.addEventListener("click", (event) => {
+            console.log(event.target.id);
+        });
+        //event.preventDefault()
+        const forms = document.getElementById("forms");
+
+        forms.addEventListener("submit", (event) => {
+
+            event.preventDefault();
+
+            console.log("Form submitted without reload");
+
+        });
+
+        //Event Bubbling
+
+        const parent = document.getElementById("parent");
+        const child = document.getElementById("child");
+
+        child.addEventListener("click", () => {
+            console.log("Button clicked");
+        });
+
+        parent.addEventListener("click", () => {
+            console.log("Parent clicked");
+        });
+
+        parent.addEventListener("click", () => {
+            console.log("Parent clicked");
+
+        });
+        child.addEventListener("click", (event) => {
+
+            event.stopPropagation();
+
+            console.log("Button clicked");
+
+        });
+        //event.target &  event.currentTarget
+
+        document.getElementById("parent")
+            .addEventListener("click", (event) => {
+
+                console.log("target:", event.target);
+                console.log("currentTarget:", event.currentTarget);
+
+            });
+
+
+        //Event Delegation
+        const users = document.getElementById("users");
+        users.addEventListener("click", (event) => {
+
+            if (event.target.classList.contains("user")) {
+
+                console.log("Clicked:", event.target.textContent);
+
+            }
+
+        });
+
+        const list = document.getElementById("list");
+
+        list.addEventListener("click", (event) => {
+
+            if (event.target.tagName === "LI") {
+                console.log("Clicked:", event.target.textContent);
+            }
+
+        });
+
+        const li = document.createElement("li");
+
+        li.textContent = "New Item";
+
+        list.appendChild(li);
+        // const input = document.getElementById("username");
+        // const result = document.getElementById("result");
+
+        // input.addEventListener("input", () => {
+        //     result.textContent = input.value;
+        // });
+
+        // //change
+        // const city = document.getElementById("city");
+
+        // city.addEventListener("change", () => {
+        //     console.log("Selected:", city.value);
+        // });
+
+        // //submit
+        // const form = document.getElementById("myFrom");
+        // form.addEventListener("submit", (event) => {
+        //     event.preventDefault();
+        //     console.log("From submitted!");
+        // });
+        // // event.target
+        // const btn = document.getElementById("btn");
+
+        // btn.addEventListener("click", (event) => {
+        //     console.log(event.target);
+        // });
+        // //keydown
+        // document.addEventListener("keydown", (event) => {
+        //     console.log("Key:", event.key);
+        // });
+
+        // //keyup
+        // document.addEventListener("keyup", (event) => {
+        //     console.log("Key released:", event.key);
+        // });
+        // //mouse eventss
+        // //mouseover
+        // const box = document.getElementById("box");
+
+        // box.addEventListener("mouseover", () => {
+        //     console.log("Mouse is over the box");
+        // });
+        // //mouseout
+        // box.addEventListener("mouseout", () => {
+        //     console.log("Mouse left the box");
+        // });
+        // //multiple events
+        // const but = document.getElementById("btn");
+
+        // but.addEventListener("click", () => {
+        //     console.log("Clicked");
+        // });
+
+        // but.addEventListener("mouseover", () => {
+        //     console.log("Mouse Over");
+        // });
+
+        // but.addEventListener("mouseout", () => {
+        //     console.log("Mouse Out");
+        // });
+    </script>
+
+</body>
+
+</html>

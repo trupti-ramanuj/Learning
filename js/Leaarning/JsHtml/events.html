@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Events</title>
+</head>
+
+<body>
+
+    <h2>Student Form</h2>
+
+    <form id="studentForm">
+
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <select id="course">
+            <option value="">Select Course</option>
+            <option value="MERN">MERN Stack</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="React">React</option>
+        </select>
+
+        <button type="submit">Add Student</button>
+
+    </form>
+
+    <h3>Students</h3>
+
+    <ul id="studentList"></ul>
+
+    <script>
+
+        const form = document.getElementById("studentForm");
+        const nameInput = document.getElementById("name");
+        const course = document.getElementById("course");
+        const studentList = document.getElementById("studentList");
+
+        // input event
+        nameInput.addEventListener("input", (event) => {
+            console.log("Name:", event.target.value);
+        });
+
+        // change event
+        course.addEventListener("change", (event) => {
+            console.log("Course:", event.target.value);
+        });
+
+        // submit event
+        form.addEventListener("submit", (event) => {
+
+            event.preventDefault();
+
+            const li = document.createElement("li");
+
+            li.textContent =
+                `${nameInput.value} - ${course.value}`;
+
+            studentList.appendChild(li);
+
+            form.reset();
+
+        });
+
+        // event delegation
+        studentList.addEventListener("click", (event) => {
+
+            if (event.target.tagName === "LI") {
+
+                console.log(
+                    "Clicked Student:",
+                    event.target.textContent
+                );
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
