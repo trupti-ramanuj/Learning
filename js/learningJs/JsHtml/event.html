@@ -34,8 +34,8 @@
     <button id="btn">Click Me</button>
     <br><br>
     Multiple Event Listeners
-    <button id="mm">MM</button>
-    <button id="but">DD</button>
+    <button id="MM">MM</button>
+    <button id="DD">DD</button>
     <br>
     Event obj
     <button id="button">click</button>
@@ -124,31 +124,31 @@
             console.log("Button clicked");
         });
         //Multiple Event Listeners
-        // const MM = document.getElementById("MM");
+        const MM = document.getElementById("MM");
 
-        // MM.addEventListener("click", () => {
-        //     console.log("First function");
-        // });
+        MM.addEventListener("click", () => {
+            console.log("First function");
+        });
 
-        // MM.addEventListener("click", () => {
-        //     console.log("Second function");
-        // });
+        MM.addEventListener("click", () => {
+            console.log("Second function");
+        });
 
+        console.log(MM);
+        const DD = document.getElementById("DD");
 
-        // const DD = document.getElementById("DD");
+        DD.addEventListener("click", () => {
+            console.log("Clicked");
+        });
 
-        // DD.addEventListener("click", () => {
-        //     console.log("Clicked");
-        // });
+        DD.addEventListener("mouseover", () => {
+            console.log("Mouse Over");
+        });
 
-        // DD.addEventListener("mouseover", () => {
-        //     console.log("Mouse Over");
-        // });
-
-        // DD.addEventListener("mouseout", () => {
-        //     console.log("Mouse Out");
-        // });
-
+        DD.addEventListener("mouseout", () => {
+            console.log("Mouse Out");
+        });
+        console.log(DD);
         //event obj
         button.addEventListener("click", (event) => {
             console.log(event);
@@ -241,6 +241,9 @@
         li.textContent = "New Item";
 
         list.appendChild(li);
+
+
+
         // const input = document.getElementById("username");
         // const result = document.getElementById("result");
 
