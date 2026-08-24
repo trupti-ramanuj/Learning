@@ -152,3 +152,5 @@ function getItemCount(cart) {
 console.log("Item Count:", getItemCount(cart));
 
 console.log(cart);
+
+

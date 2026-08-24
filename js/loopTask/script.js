@@ -67,27 +67,79 @@
 //         console.log(`${i} is odd`);
 //     }
 // }
-const readline = require("readline");
+// const readline = require("readline");
 
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
+// const rl = readline.createInterface({
+//     input: process.stdin,
+//     output: process.stdout
+// });
 
-rl.question("Give a number: ", (val) => {
+// rl.question("Give a number: ", (val) => {
 
-    val = Number(val);
+//     val = Number(val);
 
-    for (let i = 1; i <= val; i++) {
-        if (i % 2 === 0) {
-            console.log(`${i} is even`);
-        } else {
-            console.log(`${i} is odd`);
-        }
-    }
+//     for (let i = 1; i <= val; i++) {
+//         if (i % 2 === 0) {
+//             console.log(`${i} is even`);
+//         } else {
+//             console.log(`${i} is odd`);
+//         }
+//     }
 
-    rl.close();
-});
+//     rl.close();
+// });
 
 // const redline =require()
-//Q9. Count how many number
+
+//Q9. Count how many numbers between 1 to 100 are divisible by both 3 and 5.
+
+for (let i = 1; i < 101; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+        console.log(i);
+    }
+}
+
+// Q10. Stop at First Mulitple of 7
+
+// write a loop from 1 to 100 that:
+// . Print each number
+// . Stops completely when it finds the first number divisible by 7  
+
+for (let i = 1; i < 101; i++) {
+    if (i % 7 === 0) {
+        break;
+    }
+    console.log(i);
+}
+
+//Q12. Skip Multiples of 3
+
+//Write a loop from 1 to 20 that:
+// . Skips numbers divisible by 3
+// . Prints all others
+
+//Use continue
+
+//Expected Output:
+//1 2 3 4 5  7 8 10 11 . . .(no 3, 6, 9, etc.)
+
+for (let i = 1; i < 21; i++) {
+    if (i % 3 === 0) continue;
+    console.log(i);
+}
+
+// Q13: Print First 5 Odd Numbers Only
+
+//Write a loop from 1 to 100 that:
+// . Prints only 5 odd number
+// . Then stops the loop
+
+//use both if, continue, and a counter + break
+let count = 0;
+for (let i = 1; i < 101; i++) {
+    if (i % 2 === 1) {
+        count++;
+        console.log(i);
+    }
+    if (count === 5) break;
+}
