@@ -6,9 +6,7 @@ const cart = [
 
 // Q1. Calculate the subtotal
 const subtotal = cart.reduce(
-    (total, item) => total + item.price * item.quantity,
-    0
-);
+    (total, item) => total + item.price * item.quantity, 0);
 
 console.log(subtotal);
 

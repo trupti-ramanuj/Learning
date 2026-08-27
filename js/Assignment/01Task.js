@@ -23,10 +23,8 @@ const outOfStock = products.filter(
 console.log(outOfStock);
 
 //Q3. Find all products where stock is greater than 5.
-function greaterThanStock(products) {
-    return products.filter(products => products.stock >= 5)
-};
-const greaterStocks = greaterThanStock(products);
+const greaterStocks = products.filter(val => val.stock >= 5);
+
 console.log(greaterStocks);
 
 
