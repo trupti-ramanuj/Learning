@@ -36,11 +36,15 @@ const expensive = products.reduce((max, product) =>
 );
 
 
-console.log(expensive);
+console.log("e", expensive);
 
 
 // Q5. Number of products in each category
-//const categoryCount = products.reduce((result, product) => {}
+const categoryCount = products.reduce((cate, product) => {
+    if (product.category)
+        return cate;
+}, {});
+
 
 
 //Q6.Create a new array containing only product names and prices.
