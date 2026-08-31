@@ -10,3 +10,11 @@ const products = [
 products.forEach(val => {
     console.log(`Name:${val.name}, Category:${val.category},Price:${val.price}`);
 });
+
+//Q3
+function sp(p, s) {
+    return products.filter(ps => ps.name.toLowerCase().includes(s.toLowerCase())
+    );
+}
+
+console.log(sp(products, "key"));
