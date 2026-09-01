@@ -6,8 +6,11 @@ function task1() {
             return res.json();
         })
         .then((data) => {
+
             console.log('Title:', data.title);
+
             console.log('Body:', data.body);
+
             console.log(data);
         })
         .catch((error) =>

@@ -12,13 +12,18 @@ async function task3() {
     try {
         const res = await fetch(url);
         const posts = await res.json();
+
         console.log('Total number of posts:', posts.length);
+
         console.log('Title of the first post:', posts[0].title);
+
         console.log('Title of the last post:', posts[posts.length - 1].title);
+
         console.log('Titles of the first 5 posts:');
         for (let i = 0; i < 5; i++) {
             console.log('-', posts[i].title);
         }
+
     } catch (error) {
         console.error('Error:', error.message);
     }
